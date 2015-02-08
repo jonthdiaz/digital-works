@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -23,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'e=x#inqm8w^qam%g(^1i)tu3@%^l-h6znf#srpfp8)(3iyh*q-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -189,9 +190,12 @@ DATABASES = {
          'HOST': '127.0.0.1',
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
          'NAME': 'dw_db',
-         'PORT': '5432',
+         'PORT': '',
          'PASSWORD': 'dw_admin'}
 }
+
+if DEBUG:
+    DATABASES['default'] = dj_database_url.config()
 
 MIGRATION_MODULES = {
     'cms': 'cms.migrations_django',
