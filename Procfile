@@ -1,1 +1,1 @@
-web: gunicorn -b 127.0.0.1:8000 dw.wsgi --log-file -
+web: gunicorn dw.wsgi --log-file -
