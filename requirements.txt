@@ -20,10 +20,14 @@ djangocms-style==1.5
 djangocms-teaser==0.1
 djangocms-text-ckeditor==2.4.3
 djangocms-video==0.1
+ecdsa==0.13
+Fabric==1.10.1
 gunicorn==19.2.1
 html5lib==0.999
+paramiko==1.15.2
 Pillow==2.7.0
 psycopg2==2.5.4
+pycrypto==2.6.1
 pytz==2014.10
 requests==2.5.1
 six==1.9.0
