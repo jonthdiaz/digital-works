@@ -185,7 +185,12 @@ CMS_PLACEHOLDER_CONF = {}
 
 DATABASES = {
     'default':
-        {'USER': '', 'HOST': 'localhost', 'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'project.db', 'PORT': '', 'PASSWORD': ''}
+        {'USER': 'dw_admin',
+         'HOST': 'localhost',
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'dw_db',
+         'PORT': '',
+         'PASSWORD': 'dw_admin'}
 }
 
 MIGRATION_MODULES = {
