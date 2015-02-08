@@ -194,7 +194,7 @@ DATABASES = {
          'PASSWORD': 'dw_admin'}
 }
 
-if DEBUG:
+if not DEBUG:
     DATABASES['default'] = dj_database_url.config()
 
 MIGRATION_MODULES = {
