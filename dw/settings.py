@@ -189,7 +189,7 @@ DATABASES = {
          'HOST': 'localhost',
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
          'NAME': 'dw_db',
-         'PORT': '',
+         'PORT': '5432',
          'PASSWORD': 'dw_admin'}
 }
 
