@@ -22,3 +22,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = '%(project_name)s.settings' % env
 
 def runserver(port='8012', ip='0.0.0.0'):
     local('./manage.py runserver %s:%s --settings=%s.local_settings' % (ip, port, env.project_name))
+
+
+def hello():
+    print('hello')
