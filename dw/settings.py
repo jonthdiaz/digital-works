@@ -1,5 +1,7 @@
 import os
 import dj_database_url
+from dw import local_settings
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -194,8 +196,12 @@ DATABASES = {
          'PASSWORD': 'dw_admin'}
 }
 
+# print('debug: %s' % local_settings.DEBUG)
+
 if not DEBUG:
     DATABASES['default'] = dj_database_url.config()
+
+
 
 MIGRATION_MODULES = {
     'cms': 'cms.migrations_django',
