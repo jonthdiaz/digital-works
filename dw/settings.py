@@ -1,5 +1,7 @@
 import os
 import dj_database_url
+from django.conf import settings
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -194,9 +196,10 @@ DATABASES = {
          'PASSWORD': 'dw_admin'}
 }
 
-# print('debug: %s' % local_settings.DEBUG)
+# print('debug: %s' % settings.DEBUG)
 
-
+if not DEBUG:
+    DATABASES['default'] = dj_database_url.config()
 
 
 MIGRATION_MODULES = {
