@@ -16,5 +16,4 @@ DATABASES = {
          'PASSWORD': 'dw_admin'}
 }
 
-if not DEBUG:
-    DATABASES['default'] = dj_database_url.config()
+
