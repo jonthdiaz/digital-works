@@ -198,7 +198,8 @@ DATABASES = {
 
 # print('debug: %s' % settings.DEBUG)
 
-
+if not DEBUG:
+    DATABASES['default'] = dj_database_url.config()
 
 
 MIGRATION_MODULES = {
