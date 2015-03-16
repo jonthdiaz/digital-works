@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jonthdiaz/digital-works",
   "dependencies": {
     "express-namespace": "^0.1.1",
+    "grunt-contrib-compass": "^1.0.1",
     "jade": "^1.9.2"
   },
   "devDependencies": {

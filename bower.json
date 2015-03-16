@@ -17,6 +17,7 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "angular": "~1.3.14",
-    "underscore": "~1.8.2"
+    "underscore": "~1.8.2",
+    "compass-mixins": "~1.0.2"
   }
 }
