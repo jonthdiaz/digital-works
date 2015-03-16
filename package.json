@@ -2,7 +2,7 @@
   "name": "digital-works",
   "version": "1.0.0",
   "description": "modules for project",
-  "main": "server.js",
+  "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
