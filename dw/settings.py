@@ -34,11 +34,6 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-
-
-
-
-
 ROOT_URLCONF = 'dw.urls'
 
 WSGI_APPLICATION = 'dw.wsgi.application'
@@ -75,11 +70,18 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'dw', 'static'),
 )
 SITE_ID = 1
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-    'django.template.loaders.eggs.Loader'
+    # 'django.template.loaders.eggs.Loader'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -112,7 +114,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'dw', 'templates'),
+    os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['templates']),
 )
 
 INSTALLED_APPS = (
@@ -176,10 +178,8 @@ CMS_LANGUAGES = {
 }
 
 CMS_TEMPLATES = (
-    ## Customize this
-    ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    # Customize this
+    ('shared/layout.html', 'layout'),
 )
 
 CMS_PERMISSION = True

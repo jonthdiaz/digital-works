@@ -1,0 +1,31 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} | Digital works</title>
+
+    {% block styles %}
+        {% if DEBUG %}
+        {% else %}
+        {% endif %}
+    {% endblock styles%}
+    {% render_block "css" %}
+</head>
+<body>
+    {% cms_toolbar %}
+    {% block header %}
+        {% include 'shared/header.html' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}   
+    
+    {% block footer %}
+    {% endblock %}   
+
+    {%block javascript%}
+    {%endblock javascript%}
+    {% render_block "js" %}
+</body>
+</html>

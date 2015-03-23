@@ -16,4 +16,3 @@ DATABASES = {
          'PASSWORD': 'dw_admin'}
 }
 
-
