@@ -113,7 +113,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'sekizai.context_processors.sekizai',
     'django.core.context_processors.static',
     'cms.context_processors.cms_settings',
-    'dw.context_processors.send_debug_to_template'
+    'dw.context_processors.send_debug_to_template',
+    'constance.context_processors.config',
 )
 
 TEMPLATE_DIRS = (
@@ -146,8 +147,14 @@ INSTALLED_APPS = (
     'djangocms_teaser',
     'djangocms_video',
     'reversion',
+    'constance',
     'dw'
 )
+
+CONSTANCE_CONFIG = {
+    'cms_toolbar': (True, 'habilitar edición con django cms'),
+}
+
 
 LANGUAGES = (
     ## Customize this

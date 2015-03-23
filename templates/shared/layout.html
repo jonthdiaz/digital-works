@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %} | Digital works</title>
-
+    {% block head%}
+    {% endblock %}
     {% block styles %}
         {% if DEBUG %}
             <link rel="stylesheet" href="{% static 'styles/css/private.css'%}" type="text/css" media="screen" />
@@ -17,7 +18,9 @@
     {% render_block "css" %}
 </head>
 <body>
+
     {% cms_toolbar %}
+
     {% block header %}
         {% include 'shared/header.html' %}
     {% endblock %}
@@ -29,7 +32,7 @@
     {% endblock %}   
 
     {%block javascript%}
-        
+
     {%endblock javascript%}
     {% render_block "js" %}
 </body>

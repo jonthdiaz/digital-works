@@ -32,6 +32,7 @@ module.exports = function  (grunt) {
         sass: {
             options:{
                 includePaths: ['content/components/compass-mixins/lib'],
+                imagePath: '../../imgs',
                 outputStyle: 'compressed',
                 sourceMap: true,
                 indentedSyntax: true,

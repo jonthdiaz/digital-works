@@ -1,0 +1,160 @@
+{% extends 'shared/layout.html' %}
+{% load static from staticfiles %}
+{% block title %} Home {% endblock %}
+
+{% block head%}
+    <script src="{% static "plugins_js/scrolled/pace.js" %}"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block styles %}
+        {% if DEBUG %}
+            <link rel="stylesheet" href="{% static 'styles/css/private.css'%}" type="text/css" media="screen" />
+        {% else %}
+            <link rel="stylesheet" href="{% static 'build/css/private.css'%}" type="text/css" media="screen" />
+        {% endif %}
+{% endblock styles%}
+
+{% block content %}
+<div id="vid-overlay"></div>
+<section id="intro">
+    <div id="intro-text">
+        <!-- To change text go to scripts.js -->
+        <h1>We are <span id="fill-text"></span></h1>
+        <div href="#about" id="scr-down">
+            <h2><span>about</span> [Company Name]</h2>
+            <a href="#about">
+                <img src="{% static 'imgs/home_public/scr_down.png'%}" alt="scr_down">
+            </a> 
+        </div>
+    </div>
+</section>
+<!-- About -->
+<section id="about">
+    <article>
+        <h5>The Brief</h5>
+        <h1><span>Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Sed a adipiscing dui. Suspendisse vulputate eros eu purus porta ultricies. <em>Mauris odio magna, suscipit in felis facilisis, sollicitudin convallis nibh. Etiam accumsan tellus quis dolor blandit tristique.</em></h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a adipiscing dui. Suspendisse vulputate eros eu purus porta ultricies. Mauris odio magna, suscipit in felis facilisis, sollicitudin convallis nibh.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a adipiscing dui. Suspendisse vulputate eros eu purus porta ultricies. Mauris odio magna, suscipit in felis facilisis, sollicitudin convallis nibh. </p>
+    </article>
+</section>
+<!-- Services -->
+<section id="services">
+    <h2>Services <span>that we offer</span></h2>
+    <article>
+        <div id="php">
+            <img src="{% static 'imgs/home_public/php-dev.png'%}" alt="php-dev">
+            <h5>PHP</h5>
+        </div>
+        <div id="wp">
+            <img src="{% static 'imgs/home_public/wp-dev.png' %}" alt="wp-dev">
+            <h5>Wordpress</h5>
+        </div>
+        <div id="ps">
+            <img src="{% static 'imgs/home_public/psd-icn.png' %}" alt="psd-icn">
+            <h5>UX/UI Design</h5>
+        </div>
+        <div id="droid">
+            <img src="{% static 'imgs/home_public/and-dev.png' %}" alt="and-dev">
+            <h5>Android Development</h5>
+        </div>
+        <div id="ios">
+            <img src="{% static 'imgs/home_public/ios-dev.png' %}" alt="ios-dev">
+            <h5>iOS Development</h5>
+        </div>
+        <div id="soc">
+            <img src="{% static 'imgs/home_public/soc-media.png' %}">
+            <h5>Social Media</h5>
+        </div>
+    </article>
+</section>
+<!-- Process -->
+<section id="process">
+    <h2>The Process</h2>
+    <article>
+        <span id="ideate">
+            <img src="{% static 'imgs/home_public/ideate.png' %} " alt="ideate">
+            <h5>Ideate</h5>
+        </span>
+        <span id="photoshop">
+            <img src="{% static 'imgs/home_public/psd.png' %} " alt="psd">
+            <h5>Photoshop</h5>
+        </span>
+        <span id="code">
+            <img src="{% static 'imgs/home_public/code.png' %} " alt="code">
+            <h5>Code</h5>
+        </span>
+        <span id="optimize">
+            <img src="{% static 'imgs/home_public/optimize.png' %} " alt="optimize">
+            <h5>Optimize</h5>
+        </span>
+        <h4>&hellip;or choose anyone of these.</h4>
+    </article>
+</section>
+<!-- Portfolio -->
+<section id="portfolio">
+    <div id="color-bg"></div>
+    <h2>Portfolio</h2>
+    <ul class="port-style">
+        <div class="diamondswrap" id="port-items">
+            <div class="item item_1">
+            <span class="item-hover"><h4>Project 1</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_2" ><span class="item-hover"><h4>Project 2</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_3"><span class="item-hover"><h4>Project 3</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_4" ><span class="item-hover"><h4>Project 4</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_5" ><span class="item-hover"><h4>Project 5</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_6" ><span class="item-hover"><h4>Project 6</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_7" ><span class="item-hover"><h4>Project 7</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_8" ><span class="item-hover"><h4>Project 8</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_9" ><span class="item-hover"><h4>Project 9</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_1" ><span class="item-hover"><h4>Project 10</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_2" ><span class="item-hover"><h4>Project 11</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_3" ><span class="item-hover"><h4>Project 12</h4><a href="#">Take a look</a></span></div>
+            <div class="item item_4" ><span class="item-hover"><h4>Project 13</h4><a href="#">Take a look</a></span></div>
+        </div>
+    </ul>
+</section>
+    <!-- Contact -->
+<section id="contact">
+    <article>
+            <div id="contact_form">
+            <h3>Let's start a project</h3>
+            <p>If you have a project in mind, you can use the below form to contact us.</p>
+            <hr>
+            <form id="cont-form" method="post">
+              <input type="text" name="name" id="name" placeholder="Name"><span>*</span><br>
+              <input type="text" spellcheck='false' name="email" id="email" placeholder="Email Address" ><span>*</span><br>
+              <input type="text" name="phone"id="phone" placeholder="Phone Number"><span style="color:#fff">*</span><br>
+              <textarea name="comments" placeholder="Tell us a little about your project"></textarea><span style="margin-top:12px;">*</span><br>
+              <a id="send-btn" href="#">Send</a>
+              <div class="clr"></div>
+            </form>
+        </div>
+        <div id="address">
+            <p>or you can send an email or call us.</p>
+            <span>info@prasanjit.com</span>
+            <span>(+91) 9779999231</span>
+            <span>#22168, Phase iii, Bathinda.</span>
+        </div>
+    </article>
+    <!-- To change map location edit scripts.js -->
+    <div id="map"></div>
+</section>
+{% endblock %}
+
+{%block javascript%}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="{% static 'plugins_js/scrolled/modernizr.custom.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/device.min.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/jquery.wordrotator.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/smooth-scroll.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/TweenMax.min.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/jquery.superscrollorama.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/jquery.diamonds.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/jquery.mb.YTPlayer.js' %}"></script>
+<script src="{% static 'plugins_js/scrolled/scripts.js' %}"></script>
+
+<!-- Edit this -->
+<!-- Put background video URL here  -->
+<a class="player" data-property="{videoURL:'http://youtu.be/UDV5O4N4FE4',containment:'body',autoPlay:true, quality:'large',  mute:true, startAt:0,opacity:1}"></a>
+{%endblock javascript%}
