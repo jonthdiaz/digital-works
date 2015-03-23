@@ -64,10 +64,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+STATIC_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['static'])
+# STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'dw', 'static'),
+    # os.path.join(BASE_DIR, 'dw', 'static'),
+    os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['content']),
 )
 SITE_ID = 1
 # List of finder classes that know how to find static files in
@@ -110,7 +112,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'sekizai.context_processors.sekizai',
     'django.core.context_processors.static',
-    'cms.context_processors.cms_settings'
+    'cms.context_processors.cms_settings',
+    'dw.context_processors.send_debug_to_template'
 )
 
 TEMPLATE_DIRS = (

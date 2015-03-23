@@ -17,7 +17,7 @@ module.exports = function  (grunt) {
             },
             dev : {
                 options: {
-                    config: 'content/config_dev/rb',
+                    config: 'content/config_dev.rb',
                 }
             }
         },
