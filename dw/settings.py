@@ -151,9 +151,9 @@ INSTALLED_APPS = (
     'dw'
 )
 
-CONSTANCE_CONFIG = {
-    'cms_toolbar': (True, 'habilitar edición con django cms'),
-}
+# CONSTANCE_CONFIG = {
+#     'cms_toolbar': (True, 'habilitar edición con django cms'),
+# }
 
 
 LANGUAGES = (
