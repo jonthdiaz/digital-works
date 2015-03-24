@@ -3,7 +3,6 @@
 {% block title %} Home {% endblock %}
 
 {% block head%}
-    <script src="{% static "plugins_js/scrolled/pace.js" %}"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 {% endblock %}
 {% block styles %}
@@ -21,7 +20,7 @@
         <!-- To change text go to scripts.js -->
         <h1>We are <span id="fill-text"></span></h1>
         <div href="#about" id="scr-down">
-            <h2><span>about</span> [Company Name]</h2>
+            <h2><span>Acerca</span> Digital works</h2>
             <a href="#about">
                 <img src="{% static 'imgs/home_public/scr_down.png'%}" alt="scr_down">
             </a> 
@@ -144,6 +143,7 @@
 {%block javascript%}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="{% static 'plugins_js/scrolled/pace.js' %}"></script>
 <script src="{% static 'plugins_js/scrolled/modernizr.custom.js' %}"></script>
 <script src="{% static 'plugins_js/scrolled/device.min.js' %}"></script>
 <script src="{% static 'plugins_js/scrolled/jquery.wordrotator.js' %}"></script>

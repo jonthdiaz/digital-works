@@ -11,12 +11,13 @@
  $(function() {
      $("#fill-text").wordsrotator({
          words: ['UI Designers', 'Programmers', 'SEO Experts'],
-         speed: 4000
+         speed: 4000,
      });
  });
 
  $(function() {
      $('#intro hgroup h1,#scr-down').fadeIn('slow');
+     $('#intro-text h1').fadeIn('slow');
  });
 
  // -----------------Animations (using superscrollorama plugin)------------
