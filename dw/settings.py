@@ -148,13 +148,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'constance',
-    'dw'
+    'dw',
 )
-
-CONSTANCE_CONFIG = {
-    'cms_toolbar': (True, 'habilitar edición con django cms'),
-}
-
 
 LANGUAGES = (
     ## Customize this
