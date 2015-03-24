@@ -6,11 +6,11 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 {% endblock %}
 {% block styles %}
-        {% if DEBUG %}
-            <link rel="stylesheet" href="{% static 'styles/css/private.css'%}" type="text/css" media="screen" />
-        {% else %}
-            <link rel="stylesheet" href="{% static 'build/css/private.css'%}" type="text/css" media="screen" />
-        {% endif %}
+    {% if DEBUG %}
+        <link rel="stylesheet" href="{% static 'styles/css/private.css'%}" type="text/css" media="screen" />
+    {% else %}
+        <link rel="stylesheet" href="{% static 'build/css/private.css'%}" type="text/css" media="screen" />
+    {% endif %}
 {% endblock styles%}
 
 {% block content %}
