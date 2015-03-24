@@ -7,6 +7,20 @@ module.exports = function  (grunt) {
             banner: '/*! <%= meta.project %> - v<%= meta.version %> - Copyright (c) Tutorya <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */'
         },
 
+        uglify: {
+            options:{
+                banner: '/*! <%= meta.project %> - v<%= meta.version %> - Copyright (c) Tutorya. Build Time: <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */',
+                mangle: false,
+                compress: true
+            },
+
+            build:{
+                files: {
+
+                }
+            }
+        },
+
         clean: ['content/build/css', 'content/build/js'],
 
         compass: {
