@@ -185,6 +185,8 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     # Customize this
     ('shared/layout.html', 'layout'),
+    ('base.html', 'base'),
+    ('shared/layout_test.html', 'layout_test'),
 )
 
 CMS_PERMISSION = True
