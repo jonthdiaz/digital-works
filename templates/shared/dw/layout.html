@@ -19,7 +19,6 @@
 </head>
 <body>
     {% cms_toolbar %}
-    {% placeholder "sidebar" %}
 
     {% block header %}
         {% include 'shared/dw/header.html' %}
@@ -29,12 +28,14 @@
     {% endblock %}   
     
     {% block footer %}
+        {% include  'shared/dw/footer.html' %}
     {% endblock %}   
 
-    {%block javascript%}
-
-    {%endblock javascript%}
     {% render_block "js" %}
+    
+    {%block javascript%}
+    {%endblock javascript%}
+    
 
 </body>
 </html>

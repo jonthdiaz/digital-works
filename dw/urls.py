@@ -13,9 +13,11 @@ urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': {'cmspages': CMSSitemap}}),
-    url(r'^', include('cms.urls')),
-    url(r'^', TemplateView.as_view(template_name='home/home_public.html'),
+
+    url(r'^', TemplateView.as_view(
+        template_name='sections/home/home_public.html'),
         name='url_home_public'),
+    url(r'^', include('cms.urls')),
 )
 
 # This is only needed when using runserver.

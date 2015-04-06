@@ -148,6 +148,7 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'constance',
+    'kopy',
     'dw',
 )
 
@@ -187,7 +188,7 @@ CMS_TEMPLATES = (
     ('shared/layout.html', 'layout'),
     ('base.html', 'base'),
     ('shared/layout_test.html', 'layout_test'),
-    ('shared//dw/layout.html', 'layout_dw'),
+    ('shared/dw/layout.html', 'layout_dw'),
 )
 
 CMS_PERMISSION = True

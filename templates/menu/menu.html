@@ -1,16 +1,16 @@
 {% load menu_tags %}
 
 {% for child in children %}
-<li class="dropdown">
+<li class="">
     {% if child.children %}
-    <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ child.get_menu_title }}
+    <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="wg_p cl_1 text_1 font_1 dropdown-toggle {% if child.selected %}active{% endif %}" data-toggle="dropdown" role="button" aria-expanded="false">{{ child.get_menu_title }}
         <span class="caret"></span>
     </a>
     <ul class="dropdown-menu" role="menu">
         {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
     </ul>
     {% else %}
-        <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}
+        <a class="wg_p font_1 cl_1 text_1 {% if child.selected %}active{% endif %}" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}
     </a>
     {% endif %}
 </li>
