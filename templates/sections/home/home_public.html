@@ -73,7 +73,10 @@
             </div>
             <div class="sau_services wg_m mt_70">
                 <div class="row">
-                    
+                    {% for item in services %}
+                        editar
+                        {% render_placeholder item.icon %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
