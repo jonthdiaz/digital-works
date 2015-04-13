@@ -99,6 +99,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware'
+
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -150,6 +151,7 @@ INSTALLED_APPS = (
     'constance',
     'kopy',
     'dw',
+    'profiles',
 )
 
 LANGUAGES = (
@@ -207,8 +209,8 @@ DATABASES = {
 
 # print('debug: %s' % settings.DEBUG)
 
-if not DEBUG:
-    DATABASES['default'] = dj_database_url.config()
+# if not DEBUG:
+#     DATABASES['default'] = dj_database_url.config()
 
 
 MIGRATION_MODULES = {

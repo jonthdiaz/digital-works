@@ -1,4 +1,4 @@
-module.exports = function  (grunt) {
+module.exports = function (grunt) {
     grunt.initConfig({
         pkd: grunt.file.readJSON('package.json'),
         meta:{
