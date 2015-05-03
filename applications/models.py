@@ -7,8 +7,10 @@ class Service(models.Model):
     """
         services of digital works
     """
-    icon = PlaceholderField('placeholder_icon')
-    # description = PlaceholderField('placeholder_description')
+    name = PlaceholderField('name', related_name='service_name')
+    description = PlaceholderField('description',
+                                   related_name='service_description')
+    icon = PlaceholderField('icon', related_name='service_icon')
     status = models.BooleanField(default=False,
                                  verbose_name=u'Servicio activo')
     date_added = models.DateTimeField(auto_now_add=True,

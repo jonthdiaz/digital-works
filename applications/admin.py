@@ -6,7 +6,7 @@ from cms.admin.placeholderadmin import PlaceholderAdminMixin
 
 
 class ServiceAdmin(PlaceholderAdminMixin, admin.ModelAdmin):
-    list_display = ['icon', 'status', 'date_added']
+    list_display = ['name', 'icon', 'description', 'status', 'date_added']
     list_filter = ['status']
 
 
