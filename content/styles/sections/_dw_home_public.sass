@@ -1,0 +1,32 @@
+html
+    font-size: 62.5%
+body
+    @include ralewayextrabold
+    font-size: 1em
+    .home_public
+        .section_intro
+            +box-sizing(border-box)
+            background: image-url('home_public/intro_back_img.jpg') fixed no-repeat center top
+            min-height: 639px
+            padding-top: 216px
+            width: 100%
+            padding-bottom: 30px
+        .section_about_us
+            +box-sizing(border-box)
+            background: image-url('home_public/nosotros_back.png') no-repeat center top
+            min-height: 578px
+            padding-bottom: 30px
+            padding-top: 115px
+            width: 100%
+        .section_about_services
+            +box-sizing(border-box)
+            background-color: #f1f1f1
+            min-height: 1000px
+            padding-bottom: 30px
+            .content_title
+                +box-sizing(border-box)
+                height: 200px
+                padding-top: 58px
+                background: image-url('home_public/rectange_title_red.png') no-repeat 96px top
+            .sau_services
+                width: 100%

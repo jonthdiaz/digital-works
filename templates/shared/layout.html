@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{% endblock %} | Digital works</title>
+    <title>{% block title %}{% endblock %} | Digital work</title>
     {% block head%}
     {% endblock %}
     {% block styles %}
@@ -20,6 +20,7 @@
 <body>
 
     {% cms_toolbar %}
+    {% placeholder "sidebar" %}
 
     {% block header %}
         {% include 'shared/header.html' %}

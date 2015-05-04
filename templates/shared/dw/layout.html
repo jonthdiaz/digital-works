@@ -1,0 +1,41 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} | Digital work</title>
+    {% block head%}
+    {% endblock %}
+    {% block styles %}
+        {% if DEBUG %}
+            <link rel="stylesheet" href="{% static 'styles/css/sections_general/dw_home_public.css'%}" type="text/css" media="screen" />
+        {% else %}
+            <link rel="stylesheet" href="{% static 'build/css/sections_general/dw_home_public.css'%}" type="text/css" media="screen" />
+        {% endif %}
+    {% endblock styles%}
+    {% render_block "css" %}
+</head>
+<body>
+    {% cms_toolbar %}
+
+    {% block header %}
+        <!-- {% include 'shared/dw/header.html' %} -->
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}   
+    
+    {% block footer %}
+        {% include  'shared/dw/footer.html' %}
+    {% endblock %}   
+
+    {% render_block "js" %}
+    
+    {%block javascript%}
+    {%endblock javascript%}
+    
+
+</body>
+</html>

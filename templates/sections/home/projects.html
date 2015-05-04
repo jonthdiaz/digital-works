@@ -1,0 +1,20 @@
+{% extends 'shared/dw/layout.html' %}
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+<section class="section_initial wg_m mt_70">
+    ingreso a section de projects y esto es una prueba
+</section>
+{% endblock %}
+
+{%block javascript%}
+
+{% if DEBUG %}
+    <script data-main="{% static "src/js/home_public_dw.js" %}" src="{% static "components/requirejs/require.js" %}"></script>
+{% else %}
+    <script data-main="{% static "build/js/home_public_dw.js" %}" src="{% static "components/requirejs/require.js" %}"></script>
+{% endif %}
+
+{%endblock javascript%}

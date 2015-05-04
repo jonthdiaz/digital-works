@@ -1,10 +1,24 @@
-module.exports = function  (grunt) {
+module.exports = function (grunt) {
     grunt.initConfig({
         pkd: grunt.file.readJSON('package.json'),
         meta:{
             project: 'digital-workers',
             version: '0.1',
             banner: '/*! <%= meta.project %> - v<%= meta.version %> - Copyright (c) Tutorya <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */'
+        },
+
+        uglify: {
+            options:{
+                banner: '/*! <%= meta.project %> - v<%= meta.version %> - Copyright (c) Tutorya. Build Time: <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */',
+                mangle: false,
+                compress: true
+            },
+
+            build:{
+                files: {
+
+                }
+            }
         },
 
         clean: ['content/build/css', 'content/build/js'],
@@ -33,7 +47,7 @@ module.exports = function  (grunt) {
             options:{
                 includePaths: ['content/components/compass-mixins/lib'],
                 imagePath: '../../imgs',
-                outputStyle: 'compressed',
+                outputStyle: 'nested',
                 sourceMap: true,
                 indentedSyntax: true,
                 sourceComments: true,

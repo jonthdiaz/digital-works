@@ -1,0 +1,49 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} | Digital works</title>
+    {% block head%}
+    {% endblock %}
+    {% block styles %}
+        {% if DEBUG %}
+            <link rel="stylesheet" href="{% static 'styles/css/layout_test.css'%}" type="text/css" media="screen" />
+        {% else %}
+            <link rel="stylesheet" href="{% static 'build/css/layout_test.css'%}" type="text/css" media="screen" />
+        {% endif %}
+    {% endblock styles%}
+    {% render_block "css" %}
+</head>
+<body>
+{% cms_toolbar %}
+
+<header>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Digital workers</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       {% show_menu 0 100 100 100 "menu/menu.html" %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Ingresar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<section class="main">
+    {% placeholder "sidebar" %}    
+</section>
+<footer>
+    
+</footer>
+<script src="{% static  'components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static  'components/bootswatch-dist/js/bootstrap.min.js' %}"></script>
+{% render_block "js" %}
+</body>

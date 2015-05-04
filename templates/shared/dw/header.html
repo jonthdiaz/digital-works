@@ -1,0 +1,35 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load copy %}
+{% load static %}
+<header class="dw_header">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 pull-left">
+                    <figure class="logo pull-left">
+                        <img src="{% static 'imgs/home_public/intro_logo.png'%}" alt="digital workers">
+                    </figure>
+                    <span class="wg_p font_1 cl_2 text_2 p_block wg_m mt_15 ml_60">{% copy 'home_digital_workers' default='DIGITAL WORKERS'%}</span>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 float_none clearfix xs_display_inline">
+                    <nav class="pull-right wg_m mt_5 navbar navbar-default xs_float_none" role="navigation">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-ex1-collapse">
+                              <span class="sr-only">Desplegar navegación</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                          </div>
+                         <div class="collapse navbar-collapse navbar-ex1-collapse wg_m mt_10">
+                            <ul class="nav navbar-nav">
+                                {% show_menu 0 100 100 100 "menu/menu.html" %}
+                            </ul>
+                         </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

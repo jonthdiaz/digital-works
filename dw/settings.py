@@ -99,6 +99,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware'
+
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -147,14 +148,13 @@ INSTALLED_APPS = (
     'djangocms_teaser',
     'djangocms_video',
     'reversion',
+    'django_extensions',
     'constance',
-    'dw'
+    'kopy',
+    'dw',
+    'profiles',
+    'applications'
 )
-
-CONSTANCE_CONFIG = {
-    'cms_toolbar': (True, 'habilitar edición con django cms'),
-}
-
 
 LANGUAGES = (
     ## Customize this
@@ -190,6 +190,9 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     # Customize this
     ('shared/layout.html', 'layout'),
+    ('base.html', 'base'),
+    ('shared/layout_test.html', 'layout_test'),
+    ('shared/dw/layout.html', 'layout_dw'),
 )
 
 CMS_PERMISSION = True
@@ -208,8 +211,8 @@ DATABASES = {
 
 # print('debug: %s' % settings.DEBUG)
 
-if not DEBUG:
-    DATABASES['default'] = dj_database_url.config()
+# if not DEBUG:
+#     DATABASES['default'] = dj_database_url.config()
 
 
 MIGRATION_MODULES = {
