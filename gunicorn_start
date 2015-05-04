@@ -1,0 +1,23 @@
+#!/bin/bash
+name='digital-workers'
+DJANGODIR=/home/dw/webapps/digitalworkers/digital-works # Ubicación de donde esta tu proyecto django
+SOCKFILE=/home/dw/webapps/digitalworkers/digital-works/run/gunicorn.sock # Nos comunicaremos usando unix socket # Nos comunicaremos usando unix socket
+USER=dw # Usuario que tiene los superpoderes
+GROUP=dw # El grupo al que pertenece
+NUM_WORKERS=3 # Cuantos procesos debería trabajar Gunicorn spawn
+DJANGO_SETTINGS_MODULE=dw.settings # El archivo de configuración donde esta
+DJANGO_WSGI_MODULE=dw.wsgi # WSGI module name
+
+# Activamos el entorno virtual
+cd $DJANGODIR
+source ../bin/activate
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+# Creando el directorio run si por casualidad no existe.
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR
+
+# Corremos nuestra aplicación django
+# Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
+exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application --name=$NAME --workers=$NUM_WORKERS --user=$USER --group=$GROUP --log-level=debug --bind=unix:$SOCKFILE -b 0.0.0.0:8001
