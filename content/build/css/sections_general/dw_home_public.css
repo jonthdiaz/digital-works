@@ -1,0 +1,100 @@
+/*
+Error: Invalid CSS after "box-sizing": expected selector, was "(border-box)"
+        on line 9 of content/styles/sections/_dw_header.sass
+        from line 13 of content/styles/sections_general/dw_home_public.sass
+
+4: @import "compass/typography/text"
+5: @import "../globals/variables"
+6: @import "../globals/reset"
+7: @import "../globals/helpers"
+8: @import "../globals/fonts"
+9: @import "../globals/widgets"
+10: @import "../responsive/base"
+11: @import "../../components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss"
+12: @import "../sections/dw_home_public"
+13: @import "../sections/dw_header"
+
+Backtrace:
+content/styles/sections/_dw_header.sass:9
+content/styles/sections_general/dw_home_public.sass:13
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/static_parser.rb:21:in `parse_selector'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:424:in `visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:325:in `map'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:88:in `block in with_import'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:88:in `with_import'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/bin/compass:44:in `call'
+/home/dw/.rvm/gems/ruby-2.1.2/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/home/dw/.rvm/gems/ruby-2.1.2/bin/compass:23:in `load'
+/home/dw/.rvm/gems/ruby-2.1.2/bin/compass:23:in `<main>'
+/home/dw/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `eval'
+/home/dw/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"box-sizing\": expected selector, was \"(border-box)\"\A         on line 9 of content/styles/sections/_dw_header.sass\A         from line 13 of content/styles/sections_general/dw_home_public.sass\A \A 4: @import \"compass/typography/text\"\A 5: @import \"../globals/variables\"\A 6: @import \"../globals/reset\"\A 7: @import \"../globals/helpers\"\A 8: @import \"../globals/fonts\"\A 9: @import \"../globals/widgets\"\A 10: @import \"../responsive/base\"\A 11: @import \"../../components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss\"\A 12: @import \"../sections/dw_home_public\"\A 13: @import \"../sections/dw_header\""; }
