@@ -62,7 +62,7 @@
             <div class="content_title">
                 <div class="row">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                        <h2 class="wg_m font_2 text_6 cl_3">{% copy 'section_about_services_title' default='NUESTROS SERVICIOS' %}</h2>
+                        <h2 class="wg_p wg_m font_2 text_6 cl_3 p_bold">{% copy 'section_about_services_title' default='NUESTROS SERVICIOS' %}</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -73,11 +73,27 @@
             </div>
             <div class="sau_services wg_m mt_70">
                 <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     {% for item in services %}
-                        {% render_placeholder item.icon %}
-                        {% render_placeholder item.name %}
-                        {% render_placeholder item.description %}
+                       <div class="col-lg-6 text-center wg_m mb_75">
+                            <div class="icon">
+                            {% render_placeholder item.icon %}
+                            </div>
+                            <span class="wg_p cl_2 text_3 wg_m mt_20 font_4 p_block p_bold">
+                                {% render_placeholder item.name %}
+                            </span>
+                            {% render_placeholder item.description %}
+                        </div> 
+                        <div class="clearfix"></div>
                     {% endfor %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <a href="" class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix">
+                             {% static_placeholder 'link_hire_to_dw' %}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

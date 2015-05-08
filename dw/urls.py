@@ -18,7 +18,11 @@ urlpatterns = i18n_patterns('',
     # url(r'^', TemplateView.as_view(
     #     template_name='sections/home/home_public.html'),
     #     name='url_home_public'),
-    url(r'^', include('profiles.urls')),
+    url(r'^$', 'profiles.views.home_public', name='url_home_public'),
+    url(r'^proyectos/$', 'profiles.views.landing_projects',
+        name='url_projects_es'),
+    url(r'^projects/$', 'profiles.views.landing_projects',
+        name='url_projects_en'),
     url(r'^', include('cms.urls')),
 )
 

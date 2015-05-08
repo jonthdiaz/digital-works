@@ -16,7 +16,7 @@ class Service(models.Model):
     date_added = models.DateTimeField(auto_now_add=True,
                                       verbose_name=u'Fecha de creación')
 
-    def __unicode__(self):
+    def __str__(self):
         return u'%s' % (self.name)
 
     class Meta:
