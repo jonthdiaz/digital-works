@@ -87,14 +87,14 @@ module.exports = function (grunt) {
                     dir: 'content/build/js',
                     preserveLicenseComments: false,
                     "uglify2":{
-                        mange: false,
-                        compress: true,
+                        'mange': false,
+                        'compress': true,
                     },
                     paths:{
                         'jquery':'../../components/jquery/dist/jquery',
                         'angular':'../../components/angular/angular',
                         'angularAMD':'../../components/angularAMD/angularAMD',
-                        'bootstrap': '../../components/bootstrap-sass-official/assets/javascripts/bootstrap'
+                        'bootstrap': '../../components/bootstrap-sass-official/assets/javascripts/bootstrap.min'
                     },
                     shim: {
                         'jquery':{
@@ -107,12 +107,13 @@ module.exports = function (grunt) {
                             'bootstrap':{
                                 deps: ['jquery']
                             },
-          
-                    modules: {
-                            name: 'home_public_dw'
-                        }
+                    },
 
-                    }
+                modules: [
+                        {
+                            name: 'home_public_dw',
+                        }
+                    ]
                 }
             }
         }
