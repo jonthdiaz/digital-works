@@ -13,6 +13,7 @@ class Service(models.Model):
     icon = PlaceholderField('icon', related_name='service_icon')
     status = models.BooleanField(default=False,
                                  verbose_name=u'Servicio activo')
+    order = models.PositiveIntegerField(verbose_name='Orden')
     date_added = models.DateTimeField(auto_now_add=True,
                                       verbose_name=u'Fecha de creación')
 

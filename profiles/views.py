@@ -9,7 +9,7 @@ def home_public(request):
         render del landing del home public
     """
     data = {}
-    data['services'] = Service.objects.filter(status=True)
+    data['services'] = Service.objects.filter(status=True).order_by('order')
     return render(request, 'sections/home/home_public.html', data)
 
 

@@ -11,6 +11,6 @@ from cms.models.fields import PlaceholderField
 class ServiceAdmin(FrontendEditableAdminMixin, PlaceholderAdminMixin,
                    admin.ModelAdmin):
     list_display = ['id', 'name', 'icon', 'description', 'status',
-                    'date_added']
+                    'order', 'date_added']
     list_filter = ['status']
     frontend_editable_fields = ('name', 'description', 'icon', 'status')
