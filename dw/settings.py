@@ -2,6 +2,13 @@ import os
 import dj_database_url
 from django.conf import settings
 
+
+ADMINS = (
+    ('Jonathan Diaz', 'jonthdiaz@gmail.com'),
+)
+
+MANAGERS = ADMINS
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -152,6 +159,7 @@ INSTALLED_APPS = (
     'constance',
     'kopy',
     'dw',
+    'djrill',
     'profiles',
     'applications'
 )
@@ -230,3 +238,10 @@ MIGRATION_MODULES = {
     'djangocms_teaser': 'djangocms_teaser.migrations_django',
     'djangocms_video': 'djangocms_video.migrations_django'
 }
+
+DEFAULT_FROM_EMAIL = 'jonthdiaz@gmail.com'
+SERVER_EMAIL = 'jonthdiaz@gmail.com'
+
+
+EMAIL_BACKEND = 'djrill.mail.backends.djrill.DjrillBackend'
+MANDRILL_API_KEY = 'PaWrBqGZlMLb4dh8IIgUfQ'
