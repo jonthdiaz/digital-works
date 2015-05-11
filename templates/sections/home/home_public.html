@@ -106,7 +106,7 @@
 {% if DEBUG %}
     <script data-main="{% static "src/js/home_public_dw.js" %}" src="{% static "components/requirejs/require.js" %}"></script>
 {% else %}
-    <script data-main="{% static "build/js/home_public_dw.js" %}" src="{% static "components/requirejs/require.js" %}"></script>
+    <script data-main="{% static "build/js/home_public_dw.min.js" %}" src="{% static "components/requirejs/require.js" %}"></script>
 {% endif %}
 
 {%endblock javascript%}
