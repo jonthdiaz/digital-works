@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 
             build:{
                 files: {
-
+                    'content/build/js/home_public_dw.min.js': ['content/src/js/home_public_dw.js'],
                 }
             }
         },
@@ -78,16 +78,55 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
+        },
+        requirejs:{
+            compile: {
+                options:{
+                    optimize: 'uglify2',
+                    baseUrl: 'content/src/js',
+                    dir: 'content/build/js',
+                    preserveLicenseComments: false,
+                    "uglify2":{
+                        mange: false,
+                        compress: true,
+                    },
+                    paths:{
+                        'jquery':'../../components/jquery/dist/jquery',
+                        'angular':'../../components/angular/angular',
+                        'angularAMD':'../../components/angularAMD/angularAMD',
+                        'bootstrap': '../../components/bootstrap-sass-official/assets/javascripts/bootstrap'
+                    },
+                    shim: {
+                        'jquery':{
+                                exports : 'jQuery'
+                            },
+                            'angular': {
+                                exports: 'angular',
+                            },
+                            'angularAMD':['angular'],
+                            'bootstrap':{
+                                deps: ['jquery']
+                            },
+          
+                    modules: {
+                            name: 'home_public_dw'
+                        }
+
+                    }
+                }
+            }
         }
     });  
 
+grunt.loadNpmTasks('grunt-contrib-requirejs');
+grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-concurrent');
 grunt.loadNpmTasks('grunt-sass');
 
-grunt.registerTask( 'production', ['clean', 'compass:dist'])
+grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs', 'uglify'])
 grunt.registerTask( 'dev', ['concurrent:dev'])
 
 };
