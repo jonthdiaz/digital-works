@@ -1,5 +1,5 @@
 {% extends 'shared/dw/layout.html' %}
-{% load cms_tags menu_tags sekizai_tags %}
+{% load cms_tags menu_tags sekizai_tags placeholder_tags %}
 {% load static from staticfiles %}
 {% load copy %}
 
@@ -91,7 +91,9 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                         <a href="" class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix">
-                             {% static_placeholder 'link_hire_to_dw' %}
+                              {% static_placeholder 'link_contact_us' or %}
+                                Contrata a digital-workers
+                              {% endstatic_placeholder%}
                         </a>
                     </div>
                 </div>
