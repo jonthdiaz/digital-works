@@ -37,6 +37,8 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
 ALLOWED_HOSTS = ['*']
 
 
