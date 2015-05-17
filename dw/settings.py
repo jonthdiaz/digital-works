@@ -117,7 +117,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
     'django.core.context_processors.debug',
     'django.core.context_processors.request',
-    'django.core.context_processors.media',
+    'cms.context_processors.cms_settings',
     'django.core.context_processors.csrf',
     'django.core.context_processors.tz',
     'sekizai.context_processors.sekizai',
@@ -145,7 +145,6 @@ INSTALLED_APPS = (
     'cms',
     'menus',
     'sekizai',
-    'mptt',
     'djangocms_style',
     'djangocms_column',
     'djangocms_file',
@@ -158,6 +157,7 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'django_extensions',
+    'treebeard',
     'constance',
     'kopy',
     'dw',
@@ -255,8 +255,6 @@ DATABASES = {
 
 
 MIGRATION_MODULES = {
-    'cms': 'cms.migrations_django',
-    'menus': 'menus.migrations_django',
     'djangocms_text_ckeditor': 'djangocms_text_ckeditor.migrations_django',
     'djangocms_column': 'djangocms_column.migrations_django',
     'djangocms_flash': 'djangocms_flash.migrations_django',

@@ -3,15 +3,16 @@ bpython==0.14.1
 curtsies==0.1.19
 dj-database-url==0.3.0
 dj-static==0.0.6
-Django==1.7.4
+Django==1.7.8
 django-classy-tags==0.6.1
-django-cms==3.0.9
+django-cms==3.1.0
 django-constance==1.0.1
 django-extensions==1.5.2
 django-mptt==0.6.1
 django-reversion==1.8.5
 django-sekizai==0.8.1
 django-toolbelt==0.0.1
+django-treebeard==3.0
 djangocms-admin-style==0.2.5
 djangocms-column==1.5
 djangocms-file==0.1
@@ -30,7 +31,7 @@ ecdsa==0.13
 Fabric==1.10.1
 greenlet==0.4.5
 gunicorn==19.2.1
-html5lib==0.999
+html5lib==0.99999
 -e git+https://github.com/monoku/django-copy.git@6c85f8247e48a7dbab4096c8e1f0b48f8db3f01e#egg=kopy-master
 paramiko==1.15.2
 Pillow==2.7.0
