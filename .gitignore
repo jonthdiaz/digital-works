@@ -59,6 +59,7 @@ site-packages
 tg
 local_settings.py
 .sass-cache
+.sass-cache/
 *.log
 *.pot
 *.pyc
