@@ -59,3 +59,12 @@ site-packages
 tg
 local_settings.py
 .sass-cache
+*.log
+*.pot
+*.pyc
+*.todo
+*.backup
+*.bak
+*.map
+site-packages
+fabric-env

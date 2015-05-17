@@ -65,6 +65,3 @@ def update_local_media():
     # se copia las imagenes de media que son las que guarda en la db el cms
     command_copy_media = 'scp -r dw@digital-workers.co:/home/dw/webapps/digitalworkers/digital-works/media .'
     local(command_copy_media)
-
-def hello():
-    print('hello')
