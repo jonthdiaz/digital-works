@@ -1,8 +1,7 @@
 from django.contrib import admin
-from applications.models import Service
+from applications.models import Service, Projects
 from cms.admin.placeholderadmin import (FrontendEditableAdminMixin,
                                         PlaceholderAdminMixin)
-from cms.models.fields import PlaceholderField
 
 # Register your models here.
 
@@ -14,3 +13,12 @@ class ServiceAdmin(FrontendEditableAdminMixin, PlaceholderAdminMixin,
                     'order', 'date_added']
     list_filter = ['status']
     frontend_editable_fields = ('name', 'description', 'icon', 'status')
+
+
+@admin.register(Projects)
+class ProjectsAdmin(FrontendEditableAdminMixin, PlaceholderAdminMixin,
+                    admin.ModelAdmin):
+    list_display = ['id', 'name', 'image', 'description', 'status',
+                    'order', 'date_added']
+    list_filter = ['status']
+    frontend_editable_fields = ('name', 'description', 'image', 'status')

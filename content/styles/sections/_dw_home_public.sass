@@ -4,6 +4,7 @@ body
     @include ralewayextrabold
     font-size: 1em
     .home_public
+        margin-bottom: 300px
         .section_intro
             +box-sizing(border-box)
             background: image-url('home_public/intro_back_img.jpg') fixed no-repeat center top
@@ -30,3 +31,14 @@ body
                 background: image-url('home_public/rectange_title_red.png') no-repeat 96px top
             .sau_services
                 width: 100%
+        .section_our_projects
+            .content_title
+                background: image-url('home_public/trabajos_back.png') 
+                height: 200px
+                position: relative
+                .bkg_title
+                    @include skew(-20deg, 0deg) 
+                    background-color: $primary-red
+                    height: 200px
+                    position: absolute
+                    width: 100%

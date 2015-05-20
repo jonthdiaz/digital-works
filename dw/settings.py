@@ -198,7 +198,7 @@ LOGGING = {
 LANGUAGES = (
     ## Customize this
     ('es', gettext('es')),
-    ('en', gettext('en')),
+    # ('en', gettext('en')),
 )
 
 CMS_LANGUAGES = {

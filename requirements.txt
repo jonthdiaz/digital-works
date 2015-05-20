@@ -32,6 +32,8 @@ Fabric==1.10.1
 greenlet==0.4.5
 gunicorn==19.2.1
 html5lib==0.99999
+ipdb==0.8
+ipython==3.1.0
 -e git+https://github.com/monoku/django-copy.git@6c85f8247e48a7dbab4096c8e1f0b48f8db3f01e#egg=kopy-master
 paramiko==1.15.2
 Pillow==2.7.0
