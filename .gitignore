@@ -69,3 +69,4 @@ local_settings.py
 *.map
 site-packages
 fabric-env
+dw_fab
