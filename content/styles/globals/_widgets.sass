@@ -13,6 +13,8 @@
         color: $primary-red
     &.cl_3
         color: $primary-black
+    &.cl_4
+        color: #000
     &.text_1
         font-size: 1.3em //equivale a 13 pixeles
     &.text_2
@@ -67,6 +69,10 @@
     &.mb_75
         margin-bottom: 75px
 
+.wg_pad
+    &.pt_70
+        padding-top: 70px
+
 .wg_cursor
     &.c_pointer
         cursor: pointer
@@ -84,3 +90,14 @@
         background-color: $primary-green
         span.r_text
             @include skew(30, 0) 
+
+.wg_bkg_title
+    @include skew(-20, 0) 
+    position: absolute
+    width: 100%
+    &.primary-red
+        background-color: $primary-red
+        height: 200px
+    &.second-red
+        background-color: $second-red
+        height: 200px

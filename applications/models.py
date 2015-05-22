@@ -53,3 +53,31 @@ class Projects(models.Model):
     class Meta:
         verbose_name = u'Projecto'
         verbose_name_plural = u'Projectos'
+
+
+class Clients (models.Model):
+    '''
+        our clients
+    '''
+    name = models.CharField(max_length=300, verbose_name=u'Nombre cliente')
+    image = models.ImageField('image', upload_to='clients_images',
+                              blank=True, null=True)
+    description = PlaceholderField('description',
+                                   related_name='client_description')
+    phone = models.CharField(max_length=30, blank=True, null=True,
+                             verbose_name=u'Teléfono cliente')
+    address = models.CharField(max_length=100, blank=True, null=True,
+                               verbose_name='Dirección')
+    email = models.EmailField(max_length=100, blank=True, null=True,
+                              verbose_name=u'Email')
+    status = models.BooleanField(default=True, verbose_name=u'Cliente activo')
+    order = models.PositiveIntegerField(verbose_name=u'Orden')
+    date_added = models.DateTimeField(auto_now_add=True,
+                                      verbose_name=u'Fecha de creación')
+
+    def __str__(self):
+        return u'%s' % (self.name)
+
+    class Meta:
+        verbose_name = u'Cliente'
+        verbose_name_plural = u'Clientes'
