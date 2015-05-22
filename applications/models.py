@@ -55,9 +55,9 @@ class Projects(models.Model):
         verbose_name_plural = u'Projectos'
 
 
-class Clients (models.Model):
+class Customer(models.Model):
     '''
-        our clients
+        our customers
     '''
     name = models.CharField(max_length=300, verbose_name=u'Nombre cliente')
     image = models.ImageField('image', upload_to='clients_images',

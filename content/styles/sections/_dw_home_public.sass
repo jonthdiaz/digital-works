@@ -45,18 +45,39 @@ body
             .content_footer
                 +box-sizing(border-box)
                 height: 245px
+            .list_projects
+                .item_zero
+                    height: 275px
+                .item_one,.item_two
+                    height: 275px
+                .item_three
+                    height: 550px
+                .item_zero,.item_one,.item_two,.item_three
+                    img
+                        max-width: 100%
         .sections_our_clients
             .content_title
                 height: 200px
                 position: relative
-        .list_projects
-            .item_zero
-                height: 275px
-            .item_one,.item_two
-                height: 275px
-            .item_three
-                height: 550px
-            .item_zero,.item_one,.item_two,.item_three
-                img
-                    max-width: 100%
-
+            .list_our_clients
+                .item_cli
+                    +border-radius(10px)
+                    +box-sizing(border-box)
+                    border-width: 10px
+                    border: dashed 3px $border-red
+                    height: 90px
+                    width: auto
+    .contact_us
+        background: image-url('home_public/contacto_back.png')
+        .content_title
+            height: 200px
+            position: relative
+        .form_contact
+            +box-sizing(border-box)
+            background-color: $primary-blue
+            height: 472px
+            width: 100%
+        .content_footer
+                +box-sizing(border-box)
+                min-height: 150px
+                padding-bottom: 30px

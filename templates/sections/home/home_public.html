@@ -8,26 +8,26 @@
 <section class="home_public">
     <section class="section_intro">
         <div class="wrapper">
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                     <figure>
                         <img src="{% static 'imgs/home_public/intro_logo.png' %}" alt="">
                     </figure>
                 </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                     <h1 class="wg_p cl_1 title_1 wg_m mt_35 font_2 xs_title_1">{% copy 'h1_somos' default='SOMOS'%}
                         <span class="wg_p cl_2">{% copy 'h1_indepen' default='INDEPENDIENTES' %}</span>
                     </h1>
                 </div>
             </div>
-            <div class="row wg_m mt_70">
+            <div class="row no-gutters wg_m mt_70">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                     <span class="wg_p cl_1 text_2 p_block">{% copy 'sp_hacer_scroll' default='Hacer scroll' %}</span>
                 </div>
             </div>
-            <div class="row wg_m mt_20">
+            <div class="row no-gutters wg_m mt_20">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                     <figure id="scroll_mouse">
                         <img src="{% static 'imgs/home_public/mouse_peripheral.png' %}" alt="mouse_peripheral" class="wg_cursor c_pointer">
@@ -39,14 +39,14 @@
     {% include 'shared/dw/header.html' %}
     <section class="section_about_us">
         <div class="wrapper">
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                     <figure>
                         <img src="{% static 'imgs/home_public/nosotros_logo.png'%} " alt="nosotros_logo.png">
                     </figure>
                 </div>
             </div>
-            <div class="row wg_m mt_90">
+            <div class="row no-gutters wg_m mt_90">
                 <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 text-center col-lg-offset-2 col-md-offset-2 col-sm-offset-1 col-xs-offset-1">
                     <p class="wg_p font_1 cl_1 text_4">
                         <span class="wg_p text_5 cl_1 p_bold">{% copy 'section_about_us_dw' default='Somos Digital Workers, '%}</span>
@@ -60,19 +60,19 @@
     <section class="section_about_services">
         <div class="wrapper">
             <div class="content_title">
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                         <h2 class="wg_p wg_m font_2 text_6 cl_3 p_bold">{% copy 'section_about_services_title' default='NUESTROS SERVICIOS' %}</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                         <p class="wg_p text_7 cl_3 font_3">{% copy 'section_about_services_des' default='Tenemos los mejores servicios para lograr que tu empresa sea la numero uno en el mercado digital.' %}</p>
                     </div>
                 </div>
             </div>
             <div class="sau_services wg_m mt_70">
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     {% for item in services %}
                        <div class="col-lg-6 text-center wg_m mb_75">
@@ -88,7 +88,7 @@
                     {% endfor %}
                     </div>
                 </div>
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                         <a href="" class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green">
                             <span class="r_text clearfix">
@@ -111,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                             <h2 class="wg_p wg_m font_2 text_6 cl_1 p_bold mt_60">
                             {% static_placeholder 'section_our_projects_title' or %}
@@ -120,7 +120,7 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 wg_m mt_20">
                             <p class="wg_p text_7 cl_1 font_3">{% copy 'section_about_services_des' default='Tenemos los mejores servicios para lograr que tu empresa sea la numero uno en el mercado digital.' %}</p>
                         </div>
@@ -128,7 +128,7 @@
             </div>
         </div>
         <div class="list_projects">
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item_zero">
@@ -157,7 +157,7 @@
         </div>
         <div class="content_footer">
             <div class="wrapper">
-                <div class="row wg_pad pt_70">
+                <div class="row no-gutters wg_pad pt_70">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                         <a href="" class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green">
                             <span class="r_text clearfix">
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                             <h2 class="wg_p wg_m font_2 text_6 cl_4 p_bold mt_60">
                             {% static_placeholder 'section_our_clients_title' or %}
@@ -189,16 +189,110 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row no-gutters">
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 wg_m mt_20">
                             <p class="wg_p text_7 cl_4 font_3">{% copy 'section_our_clients_des' default='Estamos comenzando, pero nos encantaria que su logo apareciera en esta sección' %}</p>
                         </div>
                     </div>
             </div>
         </div>
-        <div class="list_our_clients">
+        <div class="list_our_clients wg_m mt_90">
+            <div class="wrapper">
+                <div class="row no-gutters">
+                    <div class="col-xs-12">
+                        {%for item in customer %}
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="item_cli">
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                                <div class="item_cli wg_m mr_15">
+                                    <span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">
+                                        {% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                                <div class="item_cli wg_m ml_15 mr_15">
+                                    <span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">
+                                        {% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}
+                                    </span>
+                                </div>  
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                                <div class="item_cli wg_m ml_15">
+                                    <span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">
+                                            {% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}
+                                        </span>
+                                </div>  
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact_us wg_m mt_130">
+         <div class="content_title">
+            <div class="wrapper">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
+                            <div class="wg_bkg_title primary-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                            <h2 class="wg_p wg_m font_2 text_6 cl_1 p_bold mt_60">
+                            {% static_placeholder 'section_contact_us_title' or %}
+                                {% copy 'section_contact_us_title' default='CONTÁCTENOS' %}
+                            {% endstatic_placeholder %}
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 wg_m mt_20">
+                            <p class="wg_p text_7 cl_1 font_3">{% copy 'section_contact_us_des' default='Estamos a su servicio, escribenos y empecemos a trabajar juntos' %}</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="form_contact">
             <div class="wrapper">
                 
+            </div>
+        </div>
+        <div class="content_footer">
+            <div class="wrapper">
+                <div class="row no-gutters wg_m mt_50">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-10 col-xs-offset-1 col-lg-offset-0 col-md-offset-0 text-center col-sm-offset-0">
+                        <span class="wg_p cl_1 font_3 text_7 p_block">
+                        {% copy 'section_contact_us_sp1' default='Tambien puedes escribirnos o llamarnos a:' %}</span>
+                    </div>
+                </div>
+                <div class="row no-gutters wg_m mt_40">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-xs-offset-0 col-ls-offset-1 col-md-offset-1 col-sm-offset-1">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-xs-center ">
+                            <span class="wg_p font_3 cl_1 text_9">
+                                <i class="wg_icon icon_email clearfix wg_m mr_15"></i>
+                                {% copy 'email_dw' default='info@digital-workers.co' %}
+                            </span>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center mt_xs_20">
+                            <span class="wg_p font_3 cl_1 text_9">
+                            <i class="wg_icon icon_phone clearfix wg_m mr_15"></i>
+                                {% copy 'phone_dw_1' default='310 5554321' %}
+                            </span>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0 text-xs-center mt_xs_20">
+                            <span class="wg_p font_3 cl_1 text_9">
+                            <i class="wg_icon icon_phone clearfix wg_m mr_15"></i>
+                                {% copy 'phone_dw_2' default='310 2213567' %}
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
