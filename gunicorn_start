@@ -1,7 +1,7 @@
 #!/bin/bash
 name='digital-workers'
-DJANGODIR=/home/dw/webapps/digitalworkers/digital-works # Ubicación de donde esta tu proyecto django
-SOCKFILE=/home/dw/webapps/digitalworkers/digital-works/run/gunicorn.sock # Nos comunicaremos usando unix socket # Nos comunicaremos usando unix socket
+DJANGODIR=/home/dw/webapps/digital-workers/digital-works # Ubicación de donde esta tu proyecto django
+SOCKFILE=/home/dw/webapps/digital-workers/digital-works/run/gunicorn.sock # Nos comunicaremos usando unix socket # Nos comunicaremos usando unix socket
 USER=dw # Usuario que tiene los superpoderes
 GROUP=dw # El grupo al que pertenece
 NUM_WORKERS=3 # Cuantos procesos debería trabajar Gunicorn spawn
