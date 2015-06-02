@@ -70,3 +70,4 @@ local_settings.py
 site-packages
 fabric-env
 dw_fab
+content/build/

@@ -33,13 +33,13 @@
     transform-origin: $origin
 
 @mixin rotate ($deg) 
-  @include transform(rotate(#{$deg}deg))
+    @include transform(rotate(#{$deg}deg))
 
 @mixin scale($scale)
-     @include transform(scale($scale))
+    @include transform(scale($scale))
 
 @mixin skew ($x, $y)
-   @include transform(skew(#{$x}deg, #{$y}deg))
+    @include transform(skew(#{$x}deg, #{$y}deg))
 
 @mixin translate ($x, $y)
-   @include transform(translate($x, $y))
+    @include transform(translate($x, $y))
