@@ -19,7 +19,7 @@ def home_public(request):
     except Exception as e:
         message = u'Se genero un error obteniendo servicios o projectos %s' % e
         mail_admins('Error en vista home public', message)
-    return render(request, 'sections/home/home_public.html', data)
+    return render(request, 'sections/home/home_public_1.html', data)
 
 
 def landing_projects(request):

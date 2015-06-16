@@ -232,6 +232,7 @@ CMS_TEMPLATES = (
     ('base.html', 'base'),
     ('shared/layout_test.html', 'layout_test'),
     ('shared/dw/layout.html', 'layout_dw'),
+    ('shared/dw/layout_1.html', 'layout_dw_1'),
 )
 
 CMS_PERMISSION = True

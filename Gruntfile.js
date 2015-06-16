@@ -41,7 +41,10 @@ module.exports = function (grunt) {
             },
             dev: {
                 tasks: ['watch:compass_dev']
-            }
+            },
+            jade: {
+              tasks: ['watch:jade']
+            },
         },
         sass: {
             options:{
@@ -77,6 +80,10 @@ module.exports = function (grunt) {
                 options:{
                     livereload: true
                 }
+            },
+            jade: {
+              files: ['templates-jade/**'],
+              tasks: ['jade']
             }
         },
         requirejs:{
@@ -116,8 +123,20 @@ module.exports = function (grunt) {
                     ]
                 }
             }
-        }
-    });  
+        },
+        jade: {
+            html: {
+              src:['templates-jade/**/*.jade'],
+              dest: "templates",
+              options:{
+                basePath: 'templates-jade',
+                client: false,
+                pretty: true,
+              }
+            }
+
+        },
+    });
 
 grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -126,8 +145,10 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-clean');
 grunt.loadNpmTasks('grunt-concurrent');
 grunt.loadNpmTasks('grunt-sass');
+grunt.loadNpmTasks('grunt-jade');
 
 grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs', 'uglify'])
 grunt.registerTask( 'dev', ['concurrent:dev'])
+grunt.registerTask( 'dev-jade', ['concurrent:jade'])
 
 };
