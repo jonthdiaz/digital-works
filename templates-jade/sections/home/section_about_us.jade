@@ -1,0 +1,14 @@
+{% load static from staticfiles%}
+{% load copy %}
+section.section_about_us
+  .wrapper
+    .row.no-gutters
+      .col-xs-10.text-center.col-xs-offset-1
+        figure
+          img(src="{% static 'imgs/home_public/nosotros_logo.png'%}", alt="nosotros logo")
+    .row.no-gutters.wg_m.mt_90
+      div(class="col-lg-8 col-md-8 col-sm-10 col-xs-10 text-center col-lg-offset-2 col-md-offset-2 col-sm-offset-1 col-xs-offset-1")
+        p.wg_p.font_1.cl_1.text_4
+          span.wg_p.text_5.cl_1.p_bold
+            {% copy 'section_about_us_dw' default='Somos Digital Workers, '%}
+          {% copy 'section_about_us_desp' default='una empresa nacida con base en Bogotá D.C - Colombia. Nuestro objetivo es darle presencia en la internet a pequeñas y medianas  empresas que confien en nosotros. Por eso y más, queremos ser la agencia de diseño y programación de su preferencia.' %}

@@ -1,10 +1,11 @@
-
 {% extends 'shared/dw/layout.html'%}
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static from staticfiles%}
 {% load copy %}
+
+
 {% block content %}
-<section class="home_public">
+section.home_public
   {% include "sections/home/section_intro.html" %}
   {% include "shared/dw/header.html" %}
   {% include "sections/home/section_about_us.html" %}
@@ -13,9 +14,12 @@
   {% include "sections/home/sections_our_clients.html" %}
   {% include "sections/home/contact_us.html" %}
   {% include "shared/dw/footer.html" %}
-</section>{% endblock%}
+{% endblock%}
+
 {% block javascript %}
 {% if DEBUG %}
-<script src="{% static 'components/requirejs/require.js' %}" data-main="{% static 'src/js/home_public_dw.js' %}"></script>{% else %}
-<script src="{% static 'components/requirejs/require.js' %}" data-main="{% static 'build/js/home_public_dw.min.js' %}"></script>{% endif %}
+script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'src/js/home_public_dw.js' %}")
+{% else %}
+script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'build/js/home_public_dw.min.js' %}")
+{% endif %}
 {% endblock javascript %}
