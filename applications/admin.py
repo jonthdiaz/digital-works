@@ -1,5 +1,5 @@
 from django.contrib import admin
-from applications.models import Service, Projects, Customer
+from applications.models import Service, Projects, Customer, Contact
 from cms.admin.placeholderadmin import (FrontendEditableAdminMixin,
                                         PlaceholderAdminMixin)
 
@@ -31,3 +31,9 @@ class ClientsAdmin(FrontendEditableAdminMixin, PlaceholderAdminMixin,
                     'order', 'date_added']
     list_filter = ['status']
     frontend_editable_fields = ('name', 'description', 'image', 'status')
+
+
+@admin.register(Contact)
+class ContactsAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'email', 'observations']
+    list_filter = ['name', 'email']

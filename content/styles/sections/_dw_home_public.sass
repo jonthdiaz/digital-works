@@ -76,7 +76,8 @@ body
         .form_contact
             +box-sizing(border-box)
             background-color: $primary-blue
-            height: 472px
+            min-height: 500px
+            padding-bottom: 50px
             &-form-c
                 +box-sizing(border-box)
                 padding: 60px
@@ -84,9 +85,12 @@ body
                 .input-group
                     +box-sizing(border-box)
                     padding-right: 20px
-                    input.form-control
+                    input.form-control,textarea.form-control
                         border: 0px
                         border-bottom: 2px solid white
+                        +box-shadow(none)
+                    textarea
+                        height: 140px
 
         .content_footer
             +box-sizing(border-box)

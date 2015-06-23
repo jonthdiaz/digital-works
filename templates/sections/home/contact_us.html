@@ -31,7 +31,7 @@
       <div class="form_contact-form-c">
         <form class="form wg_form form-basic">
           <div class="row no-gutters">
-            <div class="col-xs-12">
+            <div class="col-xs-10 col-xs-offset-1">
               <div class="col-xs-6">
                 <div class="input-group form-basic-width-all">
                   <input type="text" placeholder="Nombre" class="form-control fb-bck-blue fb-no-focus wg_p font_3 text_7 cl_1"/>
@@ -39,10 +39,23 @@
               </div>
               <div class="col-xs-6">
                 <div class="input-group form-basic-width-all">
-                  <input type="text" placeholder="Correo electrónico" class="form-control form-basic-bck-blue wg_p font_3 text_7 cl_1"/>
+                  <input type="text" placeholder="Correo electrónico" class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1"/>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="row no-gutters wg_m mt_80">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="input-group form-basic-width-all">
+                <textarea placeholder="{% copy 'plh_ta_contact_us' default='Cuentanos acerca de su proyecto' %}" class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters wg_m mt_50">
+            <div class="col-xs-12 text-center"><a class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green wg_cursor pointer"><span class="r_text clearfix">
+                  {% static_placeholder 'section_contact_tx_send_form' or %}
+                  {% copy 'section_contact_tx_send_form' default='Enviar formulario' %}
+                  {% endstatic_placeholder %}</span></a></div>
           </div>
         </form>
       </div>

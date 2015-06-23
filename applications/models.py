@@ -81,3 +81,22 @@ class Customer(models.Model):
     class Meta:
         verbose_name = u'Cliente'
         verbose_name_plural = u'Clientes'
+
+
+class Contact(models.Model):
+    """
+        Formulario de contacto
+    """
+    name = models.CharField(max_length=80,
+                            verbose_name=u'Nombre')
+    email = models.EmailField(verbose_name=u'Email',
+                              max_length=300)
+    observations = models.TextField(verbose_name=u'Observaciones',
+                                    max_length=2000)
+
+    def __str__(self):
+        return u'%s' % (self.name)
+
+    class Meta:
+        verbose_name = u'Contacto'
+        verbose_name_plural = u'Contactos'
