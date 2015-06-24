@@ -3,6 +3,7 @@ import time
 import os
 from fabric.api import local, settings, abort, run, env, sudo, put
 from fabric.contrib.files import exists, get
+from fabric.colors import red, green
 
 env.project_name = 'dw'
 env.hosts = ['45.56.114.26']  # ['digital-workers.co']
@@ -65,3 +66,41 @@ def update_local_media():
     # se copia las imagenes de media que son las que guarda en la db el cms
     command_copy_media = 'scp -r dw@digital-workers.co:/home/dw/webapps/digitalworkers/digital-works/media .'
     local(command_copy_media)
+
+
+def test(app=None, run_all=None, isolated=False):
+    """Run tests"""
+
+    print green('Running Collectstatic')
+    local('./manage.py collectstatic --noinput')
+
+    print green('Running tests')
+    failed_apps = []
+    if not app:
+        app = 'applications profiles'
+    mode = ''
+    if not run_all:
+        mode = '--failfast'
+    if not isolated:
+        try:
+            result = local('./manage.py test --verbosity 2 --settings=dw.local_settings %s --noinput %s' % (mode, app), capture=False)
+            if result.failed:
+                failed_apps += app.strip().split(' ')
+        except:
+            failed_apps += app.strip().split(' ')
+    else:
+        for a in app.strip().split(' '):
+            try:
+                result = local('./manage.py test %s --noinput %s' % (mode, a), capture=False)
+                if result.failed:
+                    failed_apps.append(a)
+            except:
+                failed_apps.append(a)
+    if not failed_apps:
+        print green('las pruebas pasaron!')
+        # return
+    else:
+        app_list = ', '.join(failed_apps)
+        print app_list
+        print red('Las pruebas fallaron!')
+        abort("Las pruebas fallaron")
