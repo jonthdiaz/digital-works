@@ -17,11 +17,7 @@ def create_contact(request):
             form.save()
             data['success'] = True
         else:
-            data['error'] = u'%s' % form.errors
+            data['error'] = u'%s' % form.errors.as_text()
             data['success'] = False
 
     return data
-
-
-def prueba(requets):
-    return "saludo"

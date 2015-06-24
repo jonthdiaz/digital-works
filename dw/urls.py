@@ -24,6 +24,7 @@ urlpatterns = i18n_patterns('',
         name='url_projects_es'),
     url(r'^projects/$', 'profiles.views.landing_projects',
         name='url_projects_en'),
+    url(r'^solicitudes/', include('applications.urls')),
     url(r'^', include('cms.urls')),
 )
 

@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class ProfilesApphook(CMSApp):
-    name = _('Profiles')
+    name = _('profiles')
     urls = ['profiles.urls']
 
 apphook_pool.register(ProfilesApphook)
