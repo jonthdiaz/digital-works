@@ -1,4 +1,5 @@
 require.config({
+    waitSeconds: 200,
     paths:{
         'jquery':'../../components/jquery/dist/jquery',
         'angular':'../../components/angular/angular',
