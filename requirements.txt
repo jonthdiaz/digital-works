@@ -7,7 +7,7 @@ Django==1.7.8
 django-classy-tags==0.6.1
 django-cms==3.1.0
 django-constance==1.0.1
-django-decorators==0.1.1
+-e git://github.com/jonthdiaz/django-decorators.git@f4eeac47430cc8ce791e86077bd38d1508e505b0#egg=django_decorators-master
 django-extensions==1.5.2
 django-mptt==0.6.1
 django-reversion==1.8.5
@@ -36,7 +36,6 @@ html5lib==0.99999
 ipdb==0.8
 ipython==3.1.0
 -e git+https://github.com/monoku/django-copy.git@6c85f8247e48a7dbab4096c8e1f0b48f8db3f01e#egg=kopy-master
--e git://github.com/jonthdiaz/django-decorators.git@f4eeac47430cc8ce791e86077bd38d1508e505b0#egg=django_decorators-master
 paramiko==1.15.2
 Pillow==2.7.0
 psycopg2==2.5.4
