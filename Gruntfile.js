@@ -101,7 +101,11 @@ module.exports = function (grunt) {
                         'jquery':'../../components/jquery/dist/jquery',
                         'angular':'../../components/angular/angular',
                         'angularAMD':'../../components/angularAMD/angularAMD',
-                        'bootstrap': '../../components/bootstrap-sass-official/assets/javascripts/bootstrap.min'
+                        'bootstrap': '../../components/bootstrap-sass-official/assets/javascripts/bootstrap.min',
+                        'home_app': '../../angular/home/app',
+                        'home_controllers': '../../angular/home/controllers',
+                        'home_services': '../../angular/home/services',
+                        'home_directives': '../../angular/home/directives',
                     },
                     shim: {
                         'jquery':{
