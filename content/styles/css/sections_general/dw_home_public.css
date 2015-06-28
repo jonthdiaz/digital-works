@@ -250,9 +250,18 @@ body ul, body ol {
   position: relative;
   outline: 0; }
   /* line 109, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+  .button[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+    opacity: 0.65; }
+  /* line 114, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
   .button.no-border {
     border: none; }
-  /* line 111, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+  /* line 116, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
   .button.btn_green {
     -moz-transform: skew(-30deg, 0deg);
     -ms-transform: skew(-30deg, 0deg);
@@ -260,7 +269,7 @@ body ul, body ol {
     -webkit-transform: skew(-30deg, 0deg);
     transform: skew(-30deg, 0deg);
     background-color: #19be91; }
-    /* line 114, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+    /* line 119, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
     .button.btn_green span.r_text {
       -moz-transform: skew(30deg, 0deg);
       -ms-transform: skew(30deg, 0deg);
@@ -268,7 +277,7 @@ body ul, body ol {
       -webkit-transform: skew(30deg, 0deg);
       transform: skew(30deg, 0deg); }
 
-/* line 117, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 122, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_bkg_title {
   -moz-transform: skew(-20deg, 0deg);
   -ms-transform: skew(-20deg, 0deg);
@@ -277,42 +286,56 @@ body ul, body ol {
   transform: skew(-20deg, 0deg);
   position: absolute;
   width: 100%; }
-  /* line 121, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+  /* line 126, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
   .wg_bkg_title.primary-red {
     background-color: #b91414;
     height: 200px; }
-  /* line 124, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+  /* line 129, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
   .wg_bkg_title.second-red {
     background-color: #c44040;
     height: 200px; }
 
-/* line 128, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 133, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_icon.icon_email {
   background: url("../../imgs/home_public/icon_email.png");
   height: 22px;
   width: 28px; }
-/* line 132, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 137, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_icon.icon_phone {
   background: url("../../imgs/home_public/icon_phone.png");
   height: 22px;
   width: 15px; }
 
-/* line 138, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 143, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_form .form-basic-width-all, .wg_form .fb-width-all {
   width: 100%; }
-/* line 140, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 145, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_form .form-basic-bck-blue, .wg_form .fb-bck-blue {
   background-color: #23232d; }
-/* line 143, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 148, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_form .form-basic-no-focus:focus, .wg_form .fb-no-focus:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   border-color: inherit; }
 
-/* line 148, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+/* line 153, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
 .wg_cursor.pointer {
   cursor: pointer; }
+
+/* line 155, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+.wg_loading {
+  position: absolute; }
+  /* line 157, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+  .wg_loading.loading {
+    z-index: 1; }
+    /* line 159, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
+    .wg_loading.loading-button {
+      left: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      right: 0px;
+      top: 0px; }
 
 /* line 1, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_responsive-align.sass */
 .text-xs-left {

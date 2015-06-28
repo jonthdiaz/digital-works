@@ -57,10 +57,11 @@
           </div>
           <div class="row no-gutters wg_m mt_50">
             <div class="col-xs-12 text-center">
-              <button type="submit" class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green wg_cursor pointer no-border"><span class="r_text clearfix">
+              <button type="submit" ng-disabled="form_contact_q" class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green wg_cursor pointer no-border"><span class="r_text clearfix">
                   {% static_placeholder 'section_contact_tx_send_form' or %}
                   {% copy 'section_contact_tx_send_form' default='Enviar formulario' %}
-                  {% endstatic_placeholder %}</span></button>
+                  {% endstatic_placeholder %}
+                  <loading></loading></span></button>
             </div>
           </div>
           <div class="row no-gutters wg_m mt_20">

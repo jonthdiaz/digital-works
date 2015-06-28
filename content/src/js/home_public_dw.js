@@ -7,6 +7,7 @@ require.config({
         'app': '../../angular/home/app',
         'controllers': '../../angular/home/controllers',
         'services': '../../angular/home/services',
+        'directives': '../../angular/home/directives',
     },
     shim:{
         'jquery':{
@@ -21,7 +22,8 @@ require.config({
         },
         'controllers':['angular'],
         'services':['angular'],
-        'app':['angular', 'controllers', 'services'],
+        'directives':['angular'],
+        'app':['angular', 'controllers', 'services', 'directives'],
     },
     deps:['app'],
 });

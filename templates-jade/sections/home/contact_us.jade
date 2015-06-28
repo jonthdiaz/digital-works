@@ -54,11 +54,12 @@ section(class="contact_us wg_m mt_130")
           .row.no-gutters.wg_m.mt_50
             .col-xs-12.text-center
               button(class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green wg_cursor pointer no-border",
-                      type="submit")
+                      type="submit", ng-disabled="form_contact_q")
                 span.r_text.clearfix
                   {% static_placeholder 'section_contact_tx_send_form' or %}
                   {% copy 'section_contact_tx_send_form' default='Enviar formulario' %}
                   {% endstatic_placeholder %}
+                  loading
           .row.no-gutters.wg_m.mt_20
             .col-xs-12.text-center
               div(class="alert alert-danger fade in", ng-show="form_contact_error")
