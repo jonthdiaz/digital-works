@@ -21,20 +21,23 @@ section(class="contact_us wg_m mt_130")
     .wrapper
       .form_contact-form-c
         form(class="form wg_form form-basic", ng-controller="FormContactController as formc",
-             method="POST", name="formContact", ng-submit="form_contact_submit($event)", novalidate)
+             name="formContact", ng-submit="form_contact_submit($event)",
+             novalidate)
+          input(type="hidden", ng-model="url_create_contact", ng-init="url_create_contact='{% url 'url_create_contact'%}'")
+          {% csrf_token %}
           .row.no-gutters
             .col-xs-10.col-xs-offset-1
               .col-xs-6
                 .input-group.form-basic-width-all
                   input(type="text", placeholder="Nombre", class="form-control fb-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
-                        ng-model="name", name="name",required)
+                        ng-model="contact.name", name="name",required)
                   div(ng-show="formContact.$submitted || formContact.name.$touched")
                     span(ng-show="formContact.name.$error.required", class="wg_p font_1 cl_2")
                       |El nombre es requerido
               .col-xs-6
                 .input-group.form-basic-width-all
-                  input(type="text", placeholder="Correo electrónico", class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
-                        ng-model="email", name="email", required)
+                  input(type="email", placeholder="Correo electrónico", class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
+                        ng-model="contact.email", name="email", required)
                   div(ng-show="formContact.$submitted || formContact.email.$touched")
                     span(ng-show="formContact.email.$error.required", class="wg_p font_1 cl_2")
                       |El email es requerido
@@ -44,18 +47,29 @@ section(class="contact_us wg_m mt_130")
             .col-xs-10.col-xs-offset-1
               .input-group.form-basic-width-all
                 textarea(placeholder="{% copy 'plh_ta_contact_us' default='Cuentanos acerca de su proyecto' %}",class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
-                          ng-model="observations", name="observations", required)
+                          ng-model="contact.observations", name="observations", required)
                 div(ng-show="formContact.$submitted || formContact.observations.$touched")
                     span(ng-show="formContact.observations.$error.required", class="wg_p font_1 cl_2")
                       |Campo requerido
           .row.no-gutters.wg_m.mt_50
             .col-xs-12.text-center
-              button(class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green wg_cursor pointer",
+              button(class="wg_p font_2 cl_1 text_9 wg_a text_d_none button clearfix btn_green wg_cursor pointer no-border",
                       type="submit")
                 span.r_text.clearfix
                   {% static_placeholder 'section_contact_tx_send_form' or %}
                   {% copy 'section_contact_tx_send_form' default='Enviar formulario' %}
                   {% endstatic_placeholder %}
+          .row.no-gutters.wg_m.mt_20
+            .col-xs-12.text-center
+              div(class="alert alert-danger fade in", ng-show="form_contact_error")
+                a(href="#", class="close", data-dismiss="alert")&times;
+                p(class="wg_p font_3 text_7 cl_3")
+                  |{% copy 'section_contact_form_me' default='Se han generado algunos errores intente mas tarde'  %}
+              div(class="alert alert-success fade in", ng-show="form_contact_success")
+                a(href="#", class="close", data-dismiss="alert")&times;
+                p(class="wg_p font_3 text_7 cl_3")
+                  |{% copy 'section_contact_form_ms' default='Gracias por elegirnos, pronto nos estaremos contactanto con usted.' %}
+
   .content_footer
     .wrapper
       div(class="row no-gutters wg_m mt_50")
