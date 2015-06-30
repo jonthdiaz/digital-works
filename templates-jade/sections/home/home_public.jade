@@ -17,7 +17,7 @@ section.home_public
 {% endblock%}
 
 {% block javascript %}
-{% if DEBUG %}
+{% if not DEBUG %}
 script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'src/js/home_public_dw.js' %}")
 {% else %}
 script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'build/js/home_public_dw.min.js' %}")

@@ -1,5 +1,4 @@
 require.config({
-    waitSeconds: 200,
     paths:{
         'jquery':'../../components/jquery/dist/jquery',
         'angular':'../../components/angular/angular',
@@ -9,6 +8,7 @@ require.config({
         'controllers': '../../angular/home/controllers',
         'services': '../../angular/home/services',
         'directives': '../../angular/home/directives',
+        'init_dom': '../../angular/home/init_dom',
     },
     shim:{
         'jquery':{
@@ -24,13 +24,8 @@ require.config({
         'controllers':['angular'],
         'services':['angular'],
         'directives':['angular'],
+        'init_dom': ['jquery', 'bootstrap'],
         'app':['angular', 'controllers', 'services', 'directives'],
     },
-    deps:['app'],
-});
-
-require(['jquery', 'bootstrap'],function  ($, bootstrap) {
-   $(document).ready(function  () {
-       
-   });
+    deps:['app', 'jquery', 'bootstrap', 'init_dom'],
 });

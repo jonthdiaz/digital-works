@@ -1,4 +1,36 @@
 module.exports = function (grunt) {
+    var matches = grunt.file.expand("./content/src/js/*.js");
+    var requirejsOptions = {};
+    if (matches.length > 0) {
+        for (var x = 0; x < matches.length; x++) {
+            var namefile = matches[x].replace('./content/src/js/', '');
+            namefile = namefile.replace('.js','');
+            requirejsOptions['task' + x] = {
+                "compile":{
+                    "options": {
+                        //'findNestedDependencies': true, 
+                        "baseUrl": "./",
+                        //"appDir": 'content/src/js/', 
+                        //"dir": 'content/build/js',
+                        "mainConfigFile": 'content/src/config.js',
+                        //"wrap": true,
+                        //"name": "content/src/js/" + namefile,
+                        "out": "content/build/js/" + namefile + ".min.js",
+                        //"optimize": "uglify2",
+                        //"uglify2": {
+                        //    "mangle": false
+                        //},
+                        //"generateSourceMaps": false,
+                        //"preserveLicenseComments": false,
+                        //"done": function(done, output) {
+                        //    done();
+                        //}
+                    }    
+                }
+                
+            };
+        }
+    }
     grunt.initConfig({
         pkd: grunt.file.readJSON('package.json'),
         meta:{
@@ -86,48 +118,7 @@ module.exports = function (grunt) {
               tasks: ['jade']
             }
         },
-        requirejs:{
-            compile: {
-                options:{
-                    optimize: 'uglify2',
-                    baseUrl: 'content/src/js',
-                    dir: 'content/build/js',
-                    preserveLicenseComments: false,
-                    "uglify2":{
-                        'mange': false,
-                        'compress': true,
-                    },
-                    paths:{
-                        'jquery':'../../components/jquery/dist/jquery',
-                        'angular':'../../components/angular/angular',
-                        'angularAMD':'../../components/angularAMD/angularAMD',
-                        'bootstrap': '../../components/bootstrap-sass-official/assets/javascripts/bootstrap.min',
-                        'home_app': '../../angular/home/app',
-                        'home_controllers': '../../angular/home/controllers',
-                        'home_services': '../../angular/home/services',
-                        'home_directives': '../../angular/home/directives',
-                    },
-                    shim: {
-                        'jquery':{
-                                exports : 'jQuery'
-                            },
-                            'angular': {
-                                exports: 'angular',
-                            },
-                            'angularAMD':['angular'],
-                            'bootstrap':{
-                                deps: ['jquery']
-                            },
-                    },
-
-                modules: [
-                        {
-                            name: 'home_public_dw',
-                        }
-                    ]
-                }
-            }
-        },
+        requirejs:requirejsOptions,
         jade: {
             html: {
               src:['templates-jade/**/*.jade'],
@@ -142,7 +133,8 @@ module.exports = function (grunt) {
         },
     });
 
-grunt.loadNpmTasks('grunt-contrib-requirejs');
+grunt.loadNpmTasks('grunt-requirejs');
+//grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-watch');
@@ -151,8 +143,9 @@ grunt.loadNpmTasks('grunt-concurrent');
 grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-jade');
 
-grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs', 'uglify'])
+grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs'])
 grunt.registerTask( 'dev', ['concurrent:dev'])
 grunt.registerTask( 'dev-jade', ['concurrent:jade'])
+grunt.registerTask( 'default', ['requirejs'])
 
 };
