@@ -15,7 +15,7 @@
   {% include "shared/dw/footer.html" %}
 </section>{% endblock%}
 {% block javascript %}
-{% if not DEBUG %}
+{% if DEBUG %}
 <script src="{% static 'components/requirejs/require.js' %}" data-main="{% static 'src/js/home_public_dw.js' %}"></script>{% else %}
-<script src="{% static 'components/requirejs/require.js' %}" data-main="{% static 'build/js/home_public_dw.min.js' %}"></script>{% endif %}
+<script src="{% static 'components/requirejs/require.js' %}" data-main="{% static 'build/js/home_public_dw.js' %}"></script>{% endif %}
 {% endblock javascript %}

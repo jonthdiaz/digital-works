@@ -5,29 +5,26 @@ module.exports = function (grunt) {
         for (var x = 0; x < matches.length; x++) {
             var namefile = matches[x].replace('./content/src/js/', '');
             namefile = namefile.replace('.js','');
-            requirejsOptions['task' + x] = {
-                "compile":{
+            requirejsOptions['task' + x ] = {
                     "options": {
-                        //'findNestedDependencies': true, 
-                        "baseUrl": "./",
-                        //"appDir": 'content/src/js/', 
-                        //"dir": 'content/build/js',
-                        "mainConfigFile": 'content/src/config.js',
-                        //"wrap": true,
-                        //"name": "content/src/js/" + namefile,
-                        "out": "content/build/js/" + namefile + ".min.js",
-                        //"optimize": "uglify2",
-                        //"uglify2": {
-                        //    "mangle": false
-                        //},
-                        //"generateSourceMaps": false,
-                        //"preserveLicenseComments": false,
-                        //"done": function(done, output) {
-                        //    done();
-                        //}
-                    }    
-                }
-                
+                        'appDir': 'content/src/js',
+                        'dir': 'content/build/js',
+                        'mainConfigFile': 'content/src/commons/' + namefile + '.js',
+                        'optimize': 'uglify2',
+                        uglify2: {
+                            options:{
+                                banner: '/*! <%= meta.project %> - v<%= meta.version %> - Copyright (c) Digital workers. Build Time: <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> */',
+                                mangle: false,
+                                compress: true
+                            },
+                        },
+                        'normalizeDirDefines': 'skip',
+                        'skipDirOptimize': true,
+                        'modules': [{
+                            'name': namefile,
+                            }
+                        ]
+                    },
             };
         }
     }
@@ -115,10 +112,10 @@ module.exports = function (grunt) {
             },
             jade: {
               files: ['templates-jade/**'],
-              tasks: ['jade']
+              tasks: ['jade:html']
             }
         },
-        requirejs:requirejsOptions,
+        requirejs: requirejsOptions,
         jade: {
             html: {
               src:['templates-jade/**/*.jade'],
@@ -128,8 +125,16 @@ module.exports = function (grunt) {
                 client: false,
                 pretty: true,
               }
+            },
+            prod:{
+                  src:['templates-jade/**/*.jade'],
+                  dest: "templates",
+                  options:{
+                    basePath: 'templates-jade',
+                    client: false,
+                    pretty: false,
+                  }
             }
-
         },
     });
 
@@ -143,9 +148,8 @@ grunt.loadNpmTasks('grunt-concurrent');
 grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-jade');
 
-grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs'])
+grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs','jade:prod'])
 grunt.registerTask( 'dev', ['concurrent:dev'])
 grunt.registerTask( 'dev-jade', ['concurrent:jade'])
-grunt.registerTask( 'default', ['requirejs'])
 
 };

@@ -15,11 +15,10 @@ section.home_public
   {% include "sections/home/contact_us.html" %}
   {% include "shared/dw/footer.html" %}
 {% endblock%}
-
 {% block javascript %}
-{% if not DEBUG %}
+{% if DEBUG %}
 script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'src/js/home_public_dw.js' %}")
 {% else %}
-script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'build/js/home_public_dw.min.js' %}")
+script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'build/js/home_public_dw.js' %}")
 {% endif %}
 {% endblock javascript %}
