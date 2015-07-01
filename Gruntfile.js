@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 
             build:{
                 files: {
-                    'content/build/js/home_public_dw.min.js': ['content/src/js/home_public_dw.js'],
+                    'content/build/js/require.min.js': ['content/components/requirejs/require.js'],
                 }
             }
         },
@@ -148,7 +148,7 @@ grunt.loadNpmTasks('grunt-concurrent');
 grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-jade');
 
-grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs','jade:prod'])
+grunt.registerTask( 'production', ['clean', 'compass:dist', 'requirejs','jade:prod','uglify'])
 grunt.registerTask( 'dev', ['concurrent:dev'])
 grunt.registerTask( 'dev-jade', ['concurrent:jade'])
 
