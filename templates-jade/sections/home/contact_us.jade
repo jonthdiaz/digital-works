@@ -26,15 +26,15 @@ section(class="contact_us wg_m mt_130", id="contact_us")
           input(type="hidden", ng-model="url_create_contact", ng-init="url_create_contact='{% url 'url_create_contact'%}'")
           {% csrf_token %}
           .row.no-gutters
-            .col-xs-10.col-xs-offset-1
-              .col-xs-6
+            .div(class="col-lg-10 col-xs-12 col-xs-offset-0 col-lg-offset-1")
+              .col-xs-12.col-lg-6
                 .input-group.form-basic-width-all
                   input(type="text", placeholder="Nombre", class="form-control fb-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
                         ng-model="contact.name", name="name",required)
                   div(ng-show="formContact.$submitted || formContact.name.$touched")
                     span(ng-show="formContact.name.$error.required", class="wg_p font_1 cl_2")
                       |El nombre es requerido
-              .col-xs-6
+              .col-lg-6.col-xs-12.wg_m.mt_xs_60
                 .input-group.form-basic-width-all
                   input(type="email", placeholder="Correo electrónico", class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
                         ng-model="contact.email", name="email", required)
@@ -44,7 +44,7 @@ section(class="contact_us wg_m mt_130", id="contact_us")
                     span(ng-show="formContact.email.$error.email", class="wg_p font_1 cl_2")
                       |El correo electrónico no es valido
           .row.no-gutters.wg_m.mt_80
-            .col-xs-10.col-xs-offset-1
+            .col-xs-12.col-xs-offset-0.col-lg-10.col-lg-offset-1
               .input-group.form-basic-width-all
                 textarea(placeholder="{% copy 'plh_ta_contact_us' default='Cuentanos acerca de su proyecto' %}",class="form-control form-basic-bck-blue fb-no-focus wg_p font_3 text_7 cl_1",
                           ng-model="contact.observations", name="observations", required)

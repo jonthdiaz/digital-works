@@ -3,15 +3,15 @@
 {% load static %}
 header.dw_header
   .wrapper
-    .row
+    .row.no-gutters
       .col-xs-12
-        a(href="{% url 'url_home_public' %}")
-          div(class="col-lg-3 col-md-3 col-sm-4 col-xs-6 pull-left")
+        div(class="col-lg-3 col-md-3 col-sm-4 col-xs-10 pull-left")
+          a(href="{% url 'url_home_public' %}")
             figure.logo.pull-left
               img(src="{% static 'imgs/home_public/intro_logo.png'%}", alt="digital workers")
             span(class="wg_p font_1 cl_2 text_2 p_block wg_m mt_15 ml_60 p_bold")
               {% copy 'home_digital_workers' default='DIGITAL WORKERS'%}
-        div(class="col-lg-9 col-md-9 col-sm-8 col-xs-12 float_none clearfix xs_display_inline")
+        div(class="col-lg-9 col-md-9 col-sm-8 col-xs-12 wg_f f_none clearfix xs_display_inline")
           nav(class="pull-right wg_m mt_5 navbar navbar-default xs_float_none", role="navigation")
               div.navbar-header
                 button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".navbar-ex1-collapse")
