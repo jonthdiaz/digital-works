@@ -1,7 +1,7 @@
 define(function  (require) {
     var angular = require('angular');
 
-    return angular.module('refer_friends.directives',[])
+    return angular.module('home.directives',[])
       .directive('multipleEmails', function () {
       return {
         require: 'ngModel',

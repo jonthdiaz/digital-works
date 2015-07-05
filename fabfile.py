@@ -6,7 +6,7 @@ from fabric.contrib.files import exists, get
 from fabric.colors import red, green
 
 env.project_name = 'dw'
-env.hosts = ['45.56.114.26']  # ['digital-workers.co']
+env.hosts = ['45.55.214.123']  # ['digital-workers.co']
 env.user = 'dw'
 env.password = 'dw_123'
 
