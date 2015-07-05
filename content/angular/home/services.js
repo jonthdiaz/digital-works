@@ -8,7 +8,7 @@ define(function  (require) {
                 $http({
                     method: "post",
                     url: url,
-                    data:form.serialize(),
+                    data:$(form).serialize(),
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 }).success(function  (data) {
                    deferred.resolve(data); 
