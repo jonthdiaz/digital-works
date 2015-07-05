@@ -167,7 +167,8 @@ INSTALLED_APPS = (
     'dw',
     'djrill',
     'profiles',
-    'applications'
+    'applications',
+    'utils',
 )
 
 # A sample logging configuration. The only tangible logging
