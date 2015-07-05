@@ -45,4 +45,5 @@ define(function  (require) {
                       $scope.formContact.$setPristine();
                   }
             }])
+      
 })

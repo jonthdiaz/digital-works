@@ -1,4 +1,5 @@
 {% load menu_tags %}
+{% load copy %}
 
 {% for child in children %}
 <li class="">
@@ -15,3 +16,6 @@
     {% endif %}
 </li>
 {% endfor %}
+<li>
+    <a href="" class="wg_p font_1 cl_1 text_1 " scroll-on-click-go-to-contact-form >{% copy 'contac_us_header' default='CONTACTENOS'%}</a>
+</li>
