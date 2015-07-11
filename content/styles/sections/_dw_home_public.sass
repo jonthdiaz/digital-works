@@ -22,25 +22,22 @@ body
             width: 100%
         .section_about_services
             +box-sizing(border-box)
-            background-color: #f1f1f1
             min-height: 1000px
             padding-bottom: 100px
             .content_title
                 +box-sizing(border-box)
+                background-color: #f1f1f1
                 height: 200px
             .sau_services
+                background: image-url('home_public/back_punteado.png') 
                 width: 100%
         .section_our_projects
             background: image-url('home_public/trabajos_back.png') 
             .content_title
                 height: 200px
                 position: relative
-                .bkg_title
-                    @include skew(-20deg, 0deg) 
-                    background-color: #c54041
-                    height: 200px
-                    position: absolute
-                    width: 100%
+                .wg_bkg_title
+                    top: 1px
             .content_footer
                 +box-sizing(border-box)
                 height: 245px

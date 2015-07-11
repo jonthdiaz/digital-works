@@ -8,6 +8,8 @@
         @include montserratlight
     &.font_4
         @include montserratbold
+    &.font_5
+        @include ralewayextralight
     &.cl_1
         color: white
     &.cl_2
@@ -18,6 +20,8 @@
         color: $primary-black
     &.cl_4
         color: #000
+    &.cl_5
+        color: #245c77
     &.text_1
         font-size: 1.3em //equivale a 13 pixeles
     &.text_2
@@ -118,7 +122,9 @@
         border: none
     &.btn_green
         @include skew(-30, 0)
-        background-color: $primary-green
+        border: 5px solid $primary-green
+        color: $primary-green
+        background-color: transparent
         span.r_text
             @include skew(30, 0) 
 
