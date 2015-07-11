@@ -11,6 +11,8 @@
         color: white
     &.cl_2
         color: $primary-red
+    &.cl_2_imp
+        color: $primary-red !important
     &.cl_3
         color: $primary-black
     &.cl_4
@@ -103,9 +105,9 @@
 
 .button
     +border-radius(3px)
-    padding: 25px 25px
-    position: relative
     outline: 0
+    padding: 17px 25px
+    position: relative
     &[disabled]
         cursor: not-allowed
         pointer-events: none
@@ -124,7 +126,7 @@
     position: absolute
     width: 100%
     &.primary-red
-        background-color: $primary-red
+        background-color: #c54041
         height: 200px
     &.second-red
         background-color: $second-red
@@ -144,7 +146,6 @@
             width: 100%
         &-bck-blue
             background-color: $primary-blue
-        &-plaholder-cl
         &-no-focus:focus
             +box-shadow(none)
             border-color: inherit

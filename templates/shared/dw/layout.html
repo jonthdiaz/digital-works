@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{% static 'styles/css/sections_general/dw_home_public.css'%}" type="text/css" media="screen">{% else %}
     <link rel="stylesheet" href="{% static 'build/css/sections_general/dw_home_public.css'%}" type="text/css" media="screen">{% endif%}
     {% endblock styles %}
+    {% block fonts %}
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,800|Montserrat:400,700" rel="stylesheet" type="text/css">{% endblock%}
     {% render_block "css"%}
   </head>
   <body>
