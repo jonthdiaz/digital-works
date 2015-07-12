@@ -272,10 +272,6 @@ body ul, body ol {
       transform: skew(30deg, 0deg); }
     /* line 132, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
     .button.btn_green:hover {
-      -webkit-transition-timing-function: ease-in;
-      -moz-transition-timing-function: ease-in;
-      -o-transition-timing-function: ease-in;
-      transition-timing-function: ease-in;
       -webkit-transition-duration: 0.8s;
       -moz-transition-duration: 0.8s;
       -o-transition-duration: 0.8s;
@@ -284,6 +280,10 @@ body ul, body ol {
       -moz-transition-property: all;
       -o-transition-property: all;
       transition-property: all;
+      -webkit-transition-timing-function: ease-in;
+      -moz-transition-timing-function: ease-in;
+      -o-transition-timing-function: ease-in;
+      transition-timing-function: ease-in;
       background-color: #19be91;
       color: white; }
 

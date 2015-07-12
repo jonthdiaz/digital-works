@@ -130,10 +130,10 @@
         span.r_text
             @include skew(30, 0) 
         &:hover
-            +transition-timing-function(ease-in)
             +transition-duration(0.8s)
             +transition-property(all) 
-            background-color:$primary-green
+            +transition-timing-function(ease-in)
+            background-color: $primary-green
             color: white
 
 .wg_bkg_title
