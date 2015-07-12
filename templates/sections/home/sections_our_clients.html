@@ -1,5 +1,49 @@
+
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static from staticfiles%}
-{% load copy %}<section class="sections_our_clients"><div class="content_title"><div class="wrapper"><div class="col-lg-5 col-md-5 col-sm-5 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1"><div class="col-xs-11 col-xs-offset-0">         <div class="wg_bkg_title primary-red"></div></div></div><div class="row no-gutters"><div class="col-xs-10 col-xs-offset-1"><h2 class="wg_p wg_m font_2 text_6 cl_4 p_bold mt_60 mt_xs_15">{% static_placeholder 'section_our_clients_title' or %}
-{% copy 'section_our_clients_title' default='NUESTROS CLIENTES' %}
-{% endstatic_placeholder %}</h2></div></div><div class="row no-gutters"><div class="col-xs-10 col-xs-offset-1"><p class="wg_p text_7 cl_4 font_3">{% copy 'section_our_clients_des' default='Estamos comenzando, pero nos encantaria que su logo apareciera en esta sección' %}</p></div></div></div></div><div class="list_our_clients wg_m mt_90"><div class="wrapper"><div class="row no-gutters"><div class="col-xs-12">{% for item in customer %}<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><div class="item_cli"></div></div>{% empty %}<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><div class="item_cli wg_m mr_20"><span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">{% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}</span></div></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><div class="item_cli wg_m mr_20"><span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">{% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}</span></div></div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><div class="item_cli wg_m mr_20"><span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">{% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}</span></div></div>{% endfor %}</div></div></div></div></section>
+{% load copy %}
+<section class="sections_our_clients">
+  <div class="content_title">
+    <div class="wrapper">
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+        <div class="col-xs-11 col-xs-offset-0">         
+          <div class="wg_bkg_title primary-red"></div>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-xs-10 col-xs-offset-1">
+          <h2 class="wg_p wg_m font_2 text_6 cl_4 p_bold mt_60 mt_xs_15">
+            {% static_placeholder 'section_our_clients_title' or %}
+            {% copy 'section_our_clients_title' default='NUESTROS CLIENTES' %}
+            {% endstatic_placeholder %}
+          </h2>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-xs-10 col-xs-offset-1">
+          <p class="wg_p text_7 cl_4 font_3">{% copy 'section_our_clients_des' default='Estamos comenzando, pero nos encantaria que su logo apareciera en esta sección' %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list_our_clients wg_m mt_90">
+    <div class="wrapper">
+      <div class="row no-gutters">
+        <div class="col-xs-10 wg_f f_none wg_m m_center">{% for item in customer %}
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="item_cli"></div>
+          </div>{% empty %}
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="item_cli wg_m mr_20"><span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">{% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}</span></div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="item_cli wg_m mr_20"><span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">{% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}</span></div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="item_cli wg_m mr_20"><span class="wg_p font_3 cl_4 text_2 p_block wg_m mt_30">{% copy 'our_clients_your_brand' default='SU MARCA AQUÍ' %}</span></div>
+          </div>{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

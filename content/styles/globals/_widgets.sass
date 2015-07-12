@@ -19,7 +19,7 @@
     &.cl_3
         color: $primary-black
     &.cl_4
-        color: #000
+        color: #23232d
     &.cl_5
         color: #245c77
     &.text_1
@@ -91,6 +91,8 @@
         margin-right: 20px
     &.ml_15
         margin-left: 15px
+    &.m_center
+        margin: 0 auto
 
 .wg_pad
     &.pt_70
@@ -127,6 +129,12 @@
         background-color: transparent
         span.r_text
             @include skew(30, 0) 
+        &:hover
+            +transition-timing-function(ease-in)
+            +transition-duration(0.8s)
+            +transition-property(all) 
+            background-color:$primary-green
+            color: white
 
 .wg_bkg_title
     @include skew(-20, 0) 

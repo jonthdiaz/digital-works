@@ -40,7 +40,8 @@ TEMPLATE_DEBUG = False
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['digital-workers.co', '0.0.0.0', '127.0.0.1',
+                 'www.digital-workers.co', '45.55.214.123']
 
 
 # Application definition
