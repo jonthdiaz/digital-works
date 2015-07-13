@@ -1,18 +1,5 @@
-
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static from staticfiles%}
-{% load copy %}
-<footer class="section_footer">
-  <div class="wrapper">
-    <div class="row now-gutters"><a href="{% url 'url_home_public' %}">
-        <div class="col-xs-6 text-left">
-          <figure class="pull-left"><img src="{% static 'imgs/home_public/logo_footer.png' %}" alt="logo digital workers"/></figure><span class="wg_p font_1 text_5 cl_5 clearfix p_block p_bold section_footer-txt-dw-footer">
-            {% static_placeholder "txt-dw-footer" or %}
-            DIGITAL WORKERS
-            {% endstatic_placeholder %}</span>
-        </div>
-        <div class="col-xs-6 text-right">
-          <p class="wg_p font_1 text_5 cl_1 p_bold wg_m mt_10 mb_0">2015 - DERECHOS RESERVADOS</p>
-        </div></a></div>
-  </div>
-</footer>
+{% load copy %}<footer class="section_footer"><div class="wrapper"><div class="row now-gutters"><a href="{% url 'url_home_public' %}"><div class="col-xs-6 text-left"><figure class="pull-left"><img src="{% static 'imgs/home_public/logo_footer.png' %}" alt="logo digital workers"/></figure><span class="wg_p font_1 text_5 cl_5 clearfix p_block p_bold section_footer-txt-dw-footer">{% static_placeholder "txt-dw-footer" or %}
+DIGITAL WORKERS
+{% endstatic_placeholder %}</span></div><div class="col-xs-6 text-right"><p class="wg_p font_1 text_5 cl_1 p_bold wg_m mt_10 mb_0">2015 - DERECHOS RESERVADOS</p></div></a></div></div></footer>
