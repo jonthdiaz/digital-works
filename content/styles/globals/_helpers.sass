@@ -53,3 +53,25 @@
         @content
     @keyframes #{$animationName} 
         @content
+
+@mixin animation ($delay:false, $duration:false, $animation:false) 
+    @if $delay
+        -webkit-animation-delay: $delay
+        -moz-animation-delay: $delay
+        -o-animation-delay: $delay
+        animation-delay: $delay
+        
+    @if $duration
+        -webkit-animation-duration: $duration
+        -moz-animation-duration: $duration
+        -o-animation-duration: $duration
+        animation-duration: $duration
+    @if $animation
+        -webkit-animation-name: $animation
+        -moz-animation-name: $animation
+        -o-animation-name: $animation
+        animation-name: $animation
+    -webkit-animation-fill-mode: forwards /* this prevents the animation from restarting! */
+    -moz-animation-fill-mode: forwards /* this prevents the animation from restarting! */
+    -o-animation-fill-mode: forwards /* this prevents the animation from restarting! */
+    animation-fill-mode: forwards /* this prevents the animation from restarting! */

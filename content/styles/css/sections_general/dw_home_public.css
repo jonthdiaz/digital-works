@@ -361,151 +361,6 @@ body ul, body ol {
 .wg_f.f_none {
   float: none; }
 
-@-webkit-keyframes rotateWords {
-  /* line 193, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-    width: 0px; }
-
-  /* line 197, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  5% {
-    opacity: 1;
-    -webkit-animation-timing-function: ease-out;
-    width: 100%; }
-
-  /* line 201, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  17% {
-    opacity: 1; }
-
-  /* line 203, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  20% {
-    opacity: 0; }
-
-  /* line 205, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  100% {
-    opacity: 0; } }
-
-@-moz-keyframes rotateWords {
-  /* line 193, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-    width: 0px; }
-
-  /* line 197, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  5% {
-    opacity: 1;
-    -webkit-animation-timing-function: ease-out;
-    width: 100%; }
-
-  /* line 201, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  17% {
-    opacity: 1; }
-
-  /* line 203, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  20% {
-    opacity: 0; }
-
-  /* line 205, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  100% {
-    opacity: 0; } }
-
-@-o-keyframes rotateWords {
-  /* line 193, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-    width: 0px; }
-
-  /* line 197, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  5% {
-    opacity: 1;
-    -webkit-animation-timing-function: ease-out;
-    width: 100%; }
-
-  /* line 201, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  17% {
-    opacity: 1; }
-
-  /* line 203, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  20% {
-    opacity: 0; }
-
-  /* line 205, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  100% {
-    opacity: 0; } }
-
-@keyframes rotateWords {
-  /* line 193, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-    width: 0px; }
-
-  /* line 197, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  5% {
-    opacity: 1;
-    -webkit-animation-timing-function: ease-out;
-    width: 100%; }
-
-  /* line 201, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  17% {
-    opacity: 1; }
-
-  /* line 203, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  20% {
-    opacity: 0; }
-
-  /* line 205, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  100% {
-    opacity: 0; } }
-
-/* line 209, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-.rw-words-1 span {
-  -ms-animation: rotateWords 18s ease-in infinite 0s;
-  -webkit-animation: rotateWords 18s ease-in infinite 0s;
-  animation: rotateWords 18s ease-in infinite 0s; }
-
-/* line 213, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-.rw-words {
-  width: 100%;
-  height: 100px;
-  -webkit-perspective: 800px;
-  perspective: 800px; }
-  /* line 218, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-  .rw-words span {
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 100%; }
-    /* line 225, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-    .rw-words span:nth-child(2) {
-      -ms-animation-delay: 3s;
-      -webkit-animation-delay: 3s;
-      animation-delay: 3s; }
-    /* line 229, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-    .rw-words span:nth-child(3) {
-      -ms-animation-delay: 6s;
-      -webkit-animation-delay: 6s;
-      animation-delay: 6s; }
-    /* line 233, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-    .rw-words span:nth-child(4) {
-      -ms-animation-delay: 9s;
-      -webkit-animation-delay: 9s;
-      animation-delay: 9s; }
-    /* line 237, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-    .rw-words span:nth-child(5) {
-      -ms-animation-delay: 12s;
-      -webkit-animation-delay: 12s;
-      animation-delay: 12s; }
-    /* line 241, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_widgets.sass */
-    .rw-words span:nth-child(6) {
-      -ms-animation-delay: 15s;
-      -webkit-animation-delay: 15s;
-      animation-delay: 15s; }
-
 /* line 1, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_responsive-align.sass */
 .text-xs-left {
   text-align: left; }
@@ -563,6 +418,207 @@ body ul, body ol {
   /* line 37, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_responsive-align.sass */
   .text-lg-justify {
     text-align: justify; } }
+
+@-webkit-keyframes rotateWords {
+  /* line 2, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  0% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    width: 0px; }
+
+  /* line 6, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  5% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    width: 100%; }
+
+  /* line 10, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  17% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 12, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  20% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 14, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  100% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-moz-keyframes rotateWords {
+  /* line 2, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  0% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    width: 0px; }
+
+  /* line 6, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  5% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    width: 100%; }
+
+  /* line 10, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  17% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 12, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  20% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 14, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  100% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-o-keyframes rotateWords {
+  /* line 2, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  0% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    width: 0px; }
+
+  /* line 6, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  5% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    width: 100%; }
+
+  /* line 10, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  17% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 12, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  20% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 14, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  100% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@keyframes rotateWords {
+  /* line 2, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  0% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    width: 0px; }
+
+  /* line 6, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  5% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -ms-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    width: 100%; }
+
+  /* line 10, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  17% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 12, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  20% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 14, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  100% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+/* line 19, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+.rw-words-1 span {
+  -ms-animation: rotateWords 18s ease-in infinite 0s;
+  -webkit-animation: rotateWords 18s ease-in infinite 0s;
+  animation: rotateWords 18s ease-in infinite 0s; }
+
+/* line 23, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+.rw-words {
+  width: 100%;
+  height: 100px;
+  -webkit-perspective: 800px;
+  perspective: 800px; }
+  /* line 28, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+  .rw-words span {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%; }
+    /* line 35, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+    .rw-words span:nth-child(2) {
+      -webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+      -ms-animation-delay: 3s;
+      -o-animation-delay: 3s;
+      animation-delay: 3s; }
+    /* line 37, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+    .rw-words span:nth-child(3) {
+      -webkit-animation-delay: 6s;
+      -moz-animation-delay: 6s;
+      -ms-animation-delay: 6s;
+      -o-animation-delay: 6s;
+      animation-delay: 6s; }
+    /* line 39, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+    .rw-words span:nth-child(4) {
+      -webkit-animation-delay: 9s;
+      -moz-animation-delay: 9s;
+      -ms-animation-delay: 9s;
+      -o-animation-delay: 9s;
+      animation-delay: 9s; }
+    /* line 41, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/globals/_rotatewords.sass */
+    .rw-words span:nth-child(5) {
+      -webkit-animation-delay: 12s;
+      -moz-animation-delay: 12s;
+      -ms-animation-delay: 12s;
+      -o-animation-delay: 12s;
+      animation-delay: 12s; }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* line 1, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/responsive/min_width_320_480/globals/_widgets.sass */
