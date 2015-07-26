@@ -49,7 +49,7 @@ define(function  (require) {
             }
           }
       })
-  .directive('scrollOnClickGoToContactForm', [ '$animate', function($animate) {
+  .directive('scrollOnClickGoToContactForm', ['$animate', function($animate) {
       return {
         restrict: 'A',
         link: function(scope, $elm) {
