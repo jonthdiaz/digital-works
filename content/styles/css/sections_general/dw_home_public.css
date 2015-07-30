@@ -726,7 +726,10 @@ body ul, body ol {
   /* line 35, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/responsive/min_width_320_480/globals/_widgets.sass */
   .wg_lh-xs-30 {
     line-height: 30px; }
-  /* line 4, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/responsive/min_width_320_480/sections/_dw_home_public.sass */
+  /* line 3, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/responsive/min_width_320_480/sections/_dw_home_public.sass */
+  .home_public .section_intro.proyects {
+    background: url("../../imgs/projects/intro_back.jpg") fixed no-repeat center 0px !important; }
+  /* line 7, /home/jonathan/virtualenvs/projects_general/digital_works_project/digital-works/content/styles/responsive/min_width_320_480/sections/_dw_home_public.sass */
   .home_public .section_our_projects .list_projects .item_h45 {
     height: 304px !important; } }
 
