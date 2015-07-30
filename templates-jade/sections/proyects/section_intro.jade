@@ -1,0 +1,69 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static from staticfiles%}
+{% load copy %}
+.section_intro.proyects
+  .wrapper
+    .row.no-gutters
+      .col-xs-10.text-center.col-xs-offset-1
+        figure
+          img(src="{% static 'imgs/projects/icon-projects.png' %}", alt="projectos")
+    .row.no-gutters
+      .col-xs-10.text-center.col-xs-offset-1.hidden-xs
+        h1(class="wg_p cl_1 text_6 wg_m mt_35 font_2")
+          {% static_placeholder 'proyects_h1' or %}
+          {% copy 'proyects_h1' default='NUESTROS PROYECTOS' %}
+          {% endstatic_placeholder %}
+      .col-xs-12.text-center.wg_m.mt_25.mt_xs_40
+        span(class="wg_p cl_1 font_3 text_4 p_block wg_lh-xs-30")
+          |{% static_placeholder 'proyects_desp' or %}
+          {% copy 'proyects_desp' default='Aquí encontraras nuestros mejores proyectos, hemos creado grandes productos <br class="rwd-lg-break rwd-xs-break-hide"> digitales y el tuyo puede ser uno de estos.' %}
+          {% endstatic_placeholder %}
+section.section_our_projects
+  .list_projects
+    .row.no-gutters
+      .col-xs-12
+        .col-xs-12.col-md-6.col-lg-6
+          figure(class="item_h45 ")
+            img(src="{{projects.0.image.url}}", class="wg_max_w-all")
+            .name_proyect.wg_sh-hide
+              a(herf="", class="wg_p font_4 text_10 cl_1 clearfix p_block wg_a text_d_none")
+                |{% render_placeholder projects.0.name %}
+              a(herf="", class="wg_p font_1 text_2 cl_1 clearfix p_block wg_a wg_icon-see-proyect")
+                {% static_placeholder 'proyects_see_proyect' or %}
+                {% copy 'proyects_see_proyect' default='Ver proyecto' %}
+                {% endstatic_placeholder %}
+            .bkg_img_hover
+        .col-xs-12.col-md-6.col-lg-6
+          figure(class="item_h45")
+            img(src="{{projects.1.image.url}}", class="wg_max_w-all")
+            .name_proyect.wg_sh-hide
+              a(herf="", class="wg_p font_4 text_10 cl_1 clearfix p_block wg_a text_d_none")
+                |{% render_placeholder projects.1.name %}
+              a(herf="", class="wg_p font_1 text_2 cl_1 clearfix p_block wg_a wg_icon-see-proyect")
+                {% static_placeholder 'proyects_see_proyect' or %}
+                {% copy 'proyects_see_proyect' default='Ver proyecto' %}
+                {% endstatic_placeholder %}
+            .bkg_img_hover
+      .col-xs-12
+        .col-xs-12.col-md-6.col-lg-6
+          figure(class="item_h45")
+            img(src="{{projects.2.image.url}}", class="wg_max_w-all")
+            .name_proyect.wg_sh-hide
+              a(herf="", class="wg_p font_4 text_10 cl_1 clearfix p_block wg_a text_d_none")
+                |{% render_placeholder projects.2.name %}
+              a(herf="", class="wg_p font_1 text_2 cl_1 clearfix p_block wg_a wg_icon-see-proyect")
+                {% static_placeholder 'proyects_see_proyect' or %}
+                {% copy 'proyects_see_proyect' default='Ver proyecto' %}
+                {% endstatic_placeholder %}
+            .bkg_img_hover
+        .col-xs-12.col-md-6.col-lg-6
+          figure(class="item_h45")
+            img(src="{{projects.3.image.url}}", class="wg_max_w-all")
+            .name_proyect.wg_sh-hide
+              a(herf="", class="wg_p font_4 text_10 cl_1 clearfix p_block wg_a text_d_none")
+                |{% render_placeholder projects.3.name %}
+              a(herf="", class="wg_p font_1 text_2 cl_1 clearfix p_block wg_a wg_icon-see-proyect")
+                {% static_placeholder 'proyects_see_proyect' or %}
+                {% copy 'proyects_see_proyect' default='Ver proyecto' %}
+                {% endstatic_placeholder %}
+            .bkg_img_hover

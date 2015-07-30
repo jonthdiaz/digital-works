@@ -1,5 +1,6 @@
 from django.db import models
 from cms.models.fields import PlaceholderField
+from django.template import defaultfilters
 # Create your models here.
 
 
@@ -29,6 +30,7 @@ class Projects(models.Model):
     """
         our projects
     """
+    slug = models.SlugField(max_length=300, blank=True, null=True)
     name = PlaceholderField('name', related_name='project_name')
     image = models.ImageField('image', upload_to='projects_images',
                               blank=True, null=True)
@@ -39,6 +41,10 @@ class Projects(models.Model):
     order = models.PositiveIntegerField(verbose_name='Orden')
     date_added = models.DateTimeField(auto_now_add=True,
                                       verbose_name=u'Fecha de creación')
+
+    def save(self, *args, **kwargs):
+        self.slug = defaultfilters.slugify(self.name)
+        super(Projects, self).save(*args, **kwargs)
 
     @staticmethod
     def get_important_projects():

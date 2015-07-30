@@ -1,0 +1,24 @@
+
+{% load static from staticfiles%}
+{% load copy %}
+<div class="section_intro">
+  <div class="wrapper">
+    <div class="row no-gutters">
+      <div class="col-xs-10 text-center col-xs-offset-1">
+        <figure><img src="{% static 'imgs/projects/intro_back.jpg' %}" alt="logo"/></figure>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-xs-10 text-center col-xs-offset-1 hidden-xs">
+        <h1 class="wg_p cl_1 title_1 wg_m mt_35 font_2 xs_title_1">
+          <div class="rw-words-1 rw-words"><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_1' default='Diseñadores de interfaz'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_2' default='Expertos en SEO'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_3' default='Programadores'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_44' default='Estrategias digitales'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_5' default='Cautivamos a sus usuarios'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_6' default='Campañas de adwords‎'%}</span></div>
+        </h1>
+      </div>
+      <div class="col-xs-12 text-center col-xs-offset-0 visible-xs-block">
+        <h1 class="wg_p cl_1 title_1 wg_m mt_35 font_2 xs_title_1">
+          <div class="rw-words-1 rw-words"><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_xs_1' default='UI Diseñadores'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_xs_2' default='Expertos en SEO'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_xs_3' default='Programadores'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_xs_4' default='Estrategia digital'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_xs_5' default='UX usuarios'%}</span><span class="wg_p cl_2 p_block p_uppercase">{% copy 'h1_text_6' default='Campañas de adwords‎'%}</span></div>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>

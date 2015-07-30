@@ -26,4 +26,10 @@ def landing_projects(request):
     """
         render del landing del home public
     """
-    return render(request, 'sections/proyects/projects.html')
+    data = {}
+    try:
+        data['projects'] = Projects.get_important_projects()
+    except Exception as e:
+        message = u'Se genero un error obteniendo servicios o projectos %s' % e
+        mail_admins('Error en vista landing projects', message)
+    return render(request, 'sections/proyects/projects.html', data)
