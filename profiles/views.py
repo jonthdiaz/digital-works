@@ -26,4 +26,4 @@ def landing_projects(request):
     """
         render del landing del home public
     """
-    return render(request, 'sections/home/projects.html')
+    return render(request, 'sections/proyects/projects.html')

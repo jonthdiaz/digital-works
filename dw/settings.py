@@ -98,8 +98,8 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'johnny.middleware.LocalStoreClearMiddleware',
-    'johnny.middleware.QueryCacheMiddleware',
+    # 'johnny.middleware.LocalStoreClearMiddleware',
+    # 'johnny.middleware.QueryCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -290,3 +290,5 @@ CACHES = {
     )
 }
 JOHNNY_MIDDLEWARE_KEY_PREFIX = 'jc_digitalworkers'
+
+# CMS_CONTENT_CACHE_DURATION = 0

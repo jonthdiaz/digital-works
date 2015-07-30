@@ -1,0 +1,19 @@
+{% extends 'shared/dw/layout.html'%}
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static from staticfiles%}
+{% load copy %}
+
+{% block content %}
+section.home_public
+  {% include "shared/dw/header.html" %}
+  {% include "sections/home/sections_our_clients.html" %}
+  {% include "sections/home/contact_us.html" %}
+  {% include "shared/dw/footer.html" %}
+{% endblock%}
+{% block javascript %}
+{% if DEBUG %}
+script(src="{% static 'components/requirejs/require.js' %}", data-main="{% static 'src/js/home_public_dw.js' %}")
+{% else %}
+script(src="{% static 'build/js/require.min.js' %}", data-main="{% static 'build/js/home_public_dw.js' %}")
+{% endif %}
+{% endblock javascript %}
