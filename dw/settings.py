@@ -164,6 +164,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'treebeard',
     'constance',
+    'gtm',
     'kopy',
     'dw',
     'djrill',
@@ -292,3 +293,6 @@ CACHES = {
 JOHNNY_MIDDLEWARE_KEY_PREFIX = 'jc_digitalworkers'
 
 # CMS_CONTENT_CACHE_DURATION = 0
+
+# google tag manager
+GOOGLE_TAG_ID = 'GTM-WDTLL5'

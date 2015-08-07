@@ -1,6 +1,7 @@
 
 {% load cms_tags menu_tags sekizai_tags %}
-{% load static from staticfiles %}<!DOCTYPE html>
+{% load static from staticfiles %}
+{% load gtm_tags %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -19,6 +20,7 @@
     {% render_block "css"%}
   </head>
   <body>
+    {% gtm %}
     {% cms_toolbar %}
     {% block header %}
     {% endblock %}
@@ -31,14 +33,6 @@
     {% endblock javascript %}
     {% block specific_javascript %}
     {% endblock specific_javascript %}
-    {% block analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-63075729-1', 'auto');
-      ga('send', 'pageview');
-    </script>{% endblock analytics %}
+    {% block analytics %}{% endblock analytics %}
   </body>
 </html>
