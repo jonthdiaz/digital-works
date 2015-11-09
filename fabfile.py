@@ -8,7 +8,7 @@ from fabric.colors import red, green
 env.project_name = 'dw'
 env.hosts = ['45.55.214.123']  # ['digital-workers.co']
 env.user = 'dw'
-env.password = 'dw_123'
+env.password = 'dwserver'
 
 
 env.db_name = 'dw_db'

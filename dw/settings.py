@@ -94,6 +94,7 @@ STATICFILES_FINDERS = (
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    'admin_tools.template_loaders.Loader',
     # 'django.template.loaders.eggs.Loader'
 )
 
@@ -137,6 +138,11 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'admintools_bootstrap',
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
     'django.contrib.auth',
@@ -296,3 +302,5 @@ JOHNNY_MIDDLEWARE_KEY_PREFIX = 'jc_digitalworkers'
 
 # google tag manager
 GOOGLE_TAG_ID = 'GTM-WDTLL5'
+
+ADMINTOOLS_BOOTSTRAP_SITE_LINK = '/'
