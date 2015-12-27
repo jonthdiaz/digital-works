@@ -4,7 +4,7 @@ from django.conf import settings
 
 
 ADMINS = (
-    ('Jonathan Diaz', 'jonthdiaz@gmail'),
+    ('Jonathan Diaz', 'jon.erikfer@hotmail.com'),
 )
 
 MANAGERS = ADMINS
