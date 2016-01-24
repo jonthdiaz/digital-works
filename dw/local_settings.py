@@ -22,10 +22,8 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.logger.LoggingPanel',
 )
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-#TEST_RUNNER = 'djcelery.contrib.test_runner.CeleryTestSuiteRunner'
- 
+# TEST_RUNNER = 'djcelery.contrib.test_runner.CeleryTestSuiteRunner'
 show_debug_toolbar = False
- 
 if show_debug_toolbar:
     DEBUG_TOOLBAR_CONFIG = {
         'INTERCEPT_REDIRECTS': False,
@@ -33,16 +31,13 @@ if show_debug_toolbar:
         'TAG': 'div',
         'ENABLE_STACKTRACES': True,
     }
- 
     INSTALLED_APPS += (
         'debug_toolbar',
         'jstemplate',
     )
- 
     MIDDLEWARE_CLASSES += (
         'debug_toolbar.middleware.DebugToolbarMiddleware',
     )
- 
 TEMPLATE_CONTEXT_PROCESSORS += (
-    'applications.context_processors.send_debug_to_template',
+    'dw.context_processors.send_debug_to_template',
 )
