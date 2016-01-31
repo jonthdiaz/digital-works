@@ -12,6 +12,12 @@ cd /digital-works
 echo "[manage.py migrate]"
 python manage.py migrate
 
+echo "[run] create superuser"
+echo "from django.contrib.auth.models import User
+if not User.objects.filter(username='dwadmin').count():
+        User.objects.create_superuser('dwadmin', 'jonthdiaz@gmail.com', 'dwadmin')
+        " | python manage.py shell
+
 #start development server on public ip interface, on port 8080
 echo "[runserver]"
 python manage.py runserver 0.0.0.0:8080 --settings=dw.local_settings
