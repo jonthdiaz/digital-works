@@ -31,9 +31,9 @@ EXPOSE 8080
 ADD . /digital-works
 WORKDIR /digital-works 
 #alias 
-RUN alias python=/usr/bin/python3.4.0
+RUN alias python=/usr/bin/python3.4
 
 #install requirements
-#RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 RUN pip3 freeze
