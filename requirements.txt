@@ -15,7 +15,7 @@ django-appconf==1.0.1
 django-classy-tags==0.6.1
 django-cms==3.1.0
 django-constance==1.0.1
--e git://github.com/jonthdiaz/django-decorators.git@8a30c933d0b7fb7e594ac9ed5f2554e49320bc51#egg=django_decorators-origin/HEAD
+-e git://github.com/jonthdiaz/django-decorators.git@8a30c933d0b7fb7e594ac9ed5f2554e49320bc51#egg=django_decorators-origin
 django-durationfield==0.5.2
 django-extensions==1.5.2
 django-filer==0.9.11
@@ -44,17 +44,21 @@ djrill==1.3.0
 easy-thumbnails==2.2
 ecdsa==0.13
 feedparser==5.2.1
+flake8==2.5.1
 greenlet==0.4.5
 gunicorn==19.2.1
 html5lib==0.99999
 ipdb==0.8
 ipython==3.1.0
 johnny-cache==1.6.1a
--e git+https://github.com/monoku/django-copy.git@6c85f8247e48a7dbab4096c8e1f0b48f8db3f01e#egg=kopy-origin/HEAD
+-e git+https://github.com/monoku/django-copy.git@6c85f8247e48a7dbab4096c8e1f0b48f8db3f01e#egg=kopy-origin
+mccabe==0.3.1
 paramiko==1.15.2
+pep8==1.7.0
 psycopg2==2.5.4
 pycrypto==2.6.1
--e git://github.com/jonthdiaz/python3-memcached.git@24bc6e7eccdf9489f10c652d87bd20c249d1ca07#egg=python3_memcached-origin/bytes_support
+pyflakes==1.0.0
+-e git://github.com/jonthdiaz/python3-memcached.git@24bc6e7eccdf9489f10c652d87bd20c249d1ca07#egg=python3_memcached-origin
 pytz==2014.10
 redis==2.10.3
 requests==2.5.1
