@@ -247,10 +247,10 @@ CMS_PLACEHOLDER_CONF = {}
 DATABASES = {
     'default':
         {'USER': 'dw_admin',
-         'HOST': '127.0.0.1',
+         'HOST': 'db',
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
          'NAME': 'dw_db',
-         'PORT': '',
+         'PORT': '5432',
          'PASSWORD': 'dw_admin'}
 }
 

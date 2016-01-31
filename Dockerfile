@@ -36,4 +36,10 @@ RUN alias python=/usr/bin/python3.4
 #install requirements
 RUN pip3 install -r requirements.txt
 
-RUN pip3 freeze
+#RUN pip3 freeze
+#create unprivileged user
+RUN adduser --disabled-password --gecos '' dw
+
+#permisos para file run_web.sh
+RUN chmod +x manage.py
+RUN chmod +x run_web.sh
