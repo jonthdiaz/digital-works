@@ -28,18 +28,18 @@ RUN apt-get install -qy vim \
 EXPOSE 8080
 
 #copy app
-ADD . /digital-works
+VOLUME ['/home/jonathan/projects/webs/digital-workers/digital-works']
 WORKDIR /digital-works 
 #alias 
 RUN alias python=/usr/bin/python3.4
 
 #install requirements
-RUN pip3 install -r requirements.txt
+#RUN pip3 install -r requirements.txt
 
 #RUN pip3 freeze
 #create unprivileged user
 RUN adduser --disabled-password --gecos '' dw
 
 #permisos para file run_web.sh
-RUN chmod +x manage.py
-RUN chmod +x run_web.sh
+#RUN chmod +x manage.py
+#RUN chmod +x run_web.sh
