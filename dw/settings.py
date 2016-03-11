@@ -21,6 +21,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
+# filter errors allowed host
+def skip_suspicious_operations(record):
+    if record.name == 'django.security.DisallowedHost':
+        return False
+    return True
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -184,13 +190,19 @@ LOGGING = {
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
+        },
+        'skip_suspicious_operations': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': skip_suspicious_operations,
         }
+
     },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
+            'filters': ['require_debug_false', 'skip_suspicious_operations'],
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
         }
     },
     'loggers': {
@@ -247,7 +259,7 @@ CMS_PLACEHOLDER_CONF = {}
 DATABASES = {
     'default':
         {'USER': 'dw_admin',
-         'HOST': 'db',
+         'HOST': 'localhost',
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
          'NAME': 'dw_db',
          'PORT': '5432',

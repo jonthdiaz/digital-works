@@ -53,6 +53,7 @@ def update_local_db():
     drop_create_schema()
     remote_db_backup()
     restore_command = 'PGPASSWORD=%(db_password)s pg_restore -U %(db_user)s -d %(db_name)s -F c -c -h %(db_host)s %(local_backup_file_name)s' % env
+    # PGPASSWORD=dw_admin pg_restore -U dw_admin -d dw_db -F c -c -h localhost dw.backup
     i = 0
     while i < 10:
         try:

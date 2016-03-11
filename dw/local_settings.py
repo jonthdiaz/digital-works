@@ -41,3 +41,15 @@ if show_debug_toolbar:
 TEMPLATE_CONTEXT_PROCESSORS += (
     'dw.context_processors.send_debug_to_template',
 )
+
+
+
+# DATABASES = {
+#     'default':
+#         {'USER': 'dw_admin',
+#          'HOST': 'db',
+#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#          'NAME': 'dw_db',
+#          'PORT': '5432',
+#          'PASSWORD': 'dw_admin'}
+# }
