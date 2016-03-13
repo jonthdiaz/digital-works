@@ -197,7 +197,24 @@ LOGGING = {
         }
 
     },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(name)s %(asctime)s %(module)s %(process)d %(thread)d %(pathname)s@%(lineno)s: %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(name)s %(filename)s@%(lineno)s: %(message)s'
+        },
+    },
     'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false', 'skip_suspicious_operations'],
@@ -206,11 +223,19 @@ LOGGING = {
         }
     },
     'loggers': {
+        'django.security.DisallowedHost': {
+            'handlers': ['null'],
+            'propagate': False,
+        },
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
         },
+        '': {
+            'handlers': ['console', ],
+            'level': 'INFO',
+        }
     }
 }
 
